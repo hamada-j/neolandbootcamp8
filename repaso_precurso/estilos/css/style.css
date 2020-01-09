@@ -1,0 +1,37 @@
+/*
+
+    - la posicion afecta al css, de arriba a abajo, lo de abajo sobrescribe lo de arriba siempre que sea la misma regla.
+
+    - elementos por especificidad:
+
+            1 - ID (#id)
+            2 - CLASS (.class)
+            3 _ HERENCIA (section article p)
+            4 _ ETIQUETA (p)
+*/
+
+
+p{
+    background-color: blue;
+}
+
+section{
+    background-color: red;
+}
+
+.parrafo{
+    background-color: chartreuse;
+}
+
+#hola{
+    background-color: chocolate !important;
+}
+
+section article p{
+    background-color: white;
+}
+
+section article .juan{
+    background-color: white;
+}
+

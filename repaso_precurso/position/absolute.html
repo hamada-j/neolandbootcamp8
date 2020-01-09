@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relative</title>
+
+    <style>
+        .cuadrado1,
+        .cuadrado2 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .cuadrado1 {
+            background-color: red;
+            position: absolute;
+            top: 300px;
+            left: 400px;
+        }
+
+        .cuadrado2 {
+            background-color: seagreen;
+            position: absolute;
+            left: 40px;
+        }
+
+        .contenedor {
+            width: 500px;
+            margin: 0 auto;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- este es igual que static lo unico que me puedo con top left botton right-->
+    <div class="contenedor">
+        <div class="cuadrado1"></div>
+        <div class="cuadrado2"></div>
+    </div>
+
+</body>
+
+</html>
