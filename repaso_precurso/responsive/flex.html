@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: green;
+        }
+
+        .container-fluid {
+            width: 100%;
+            background-color: red;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section article {
+            width: 48%;
+            height: 100px;
+            background-color: black;
+            margin: 1%;
+            color: white;
+        }
+
+        section article:nth-child(3) {
+            width: 100%;
+        }
+
+        section article:nth-child(4) {
+            width: 78%;
+        }
+
+        section article:nth-child(5) {
+            width: 18%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="container-fluid flex">
+        <article>1</article>
+        <article>2</article>
+        <article>3</article>
+        <article>5</article>
+        <article>6</article>
+    </section>
+
+
+</body>
+
+</html>

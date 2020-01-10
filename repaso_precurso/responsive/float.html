@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flotaciones</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: green;
+        }
+
+        .container-fluid {
+            width: 100%;
+            background-color: red;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        section article {
+            width: 27.33%;
+            height: 100px;
+            background-color: black;
+            float: left;
+            margin: 10px 3%;
+            color: white;
+            padding: 1%;
+        }
+
+        section .uno {
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+
+        section .dos {
+            width: 200px;
+            height: 100px;
+            float: right;
+        }
+
+        .row:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <main>
+        <section class="container row">
+            <article class="uno"></article>
+            <article class="dos"></article>
+        </section>
+
+        <section class="container-fluid row">
+            <article>lorem</article>
+            <article>lorem</article>
+            <article>lorem</article>
+        </section>
+        <section class="container-fluid">
+            <div class="container row">
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
