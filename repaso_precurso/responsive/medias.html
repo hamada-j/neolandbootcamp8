@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medias queris</title>
+
+    <style>
+        /* ocupen todo el espacio en horintal tengan un margin 2% total una altura de 100px (o em) color el que quereais  */
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contenedor .articulo1 {
+            background-color: lightpink;
+        }
+
+        .contenedor .articulo2 {
+            background-color: lightgreen;
+        }
+
+        .contenedor .articulo3 {
+            background-color: lightseagreen;
+        }
+
+        .contenedor article {
+            background-color: black;
+            height: 6.25em;
+            width: 31.33%;
+            margin: 10px 1%;
+        }
+
+        @media(max-width: 1003px) {
+
+            .contenedor article {
+                background-color: tomato;
+                width: 48%;
+            }
+
+            .contenedor article:last-child {
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 425px) {
+            .contenedor article {
+                background-color: green;
+                width: 100%;
+            }
+        }
+
+        @media(orientation: landscape) {
+            body {
+                background-color: lime;
+            }
+        }
+
+        @media(orientation: portrait) {
+            body {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--  un seccion con tres articles -->
+
+    <section class="contenedor">
+        <article class="articulo1"></article>
+        <article class="articulo2"></article>
+        <article class="articulo3"></article>
+    </section>
+
+
+
+</body>
+
+</html>
