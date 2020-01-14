@@ -47,3 +47,12 @@ img{
     margin-left: 0em;
 }
 
+.contenedor img{
+    transition: 1s;
+}
+
+.contenedor:hover img{
+    transform: rotateZ(10deg) scale(1.25);
+
+}
+
