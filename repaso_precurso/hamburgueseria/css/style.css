@@ -117,6 +117,58 @@ header nav .menu li a.activo, header nav .menu li a:hover{
     color: #fa573a;
 } 
 
+/* INICIO HERO */
+
+.hero{
+    background-image: url('../images/fondo.jpg');
+    height: 37em;
+    background-size: cover;
+    background-position: center center;
+    background-color: #777;
+    background-blend-mode: multiply;
+}
+
+.hero>div{
+    color: white;
+    padding: 15% 3%;
+}
+
+.hero h1{
+    font-size: 2.5em;
+    font-family: 'Handlee', cursive;    
+}
+
+.hero h2{
+    color: #fa573a;
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+.hero p{
+    font-size: 1.15em;
+}
+
+.boton{
+    display: inline-block;
+    background-color: #fa573a;
+    padding: 1.15em;
+    color: white;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid #fa573a;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: #fa573a;
+}
+
+.boton:hover i{
+    transform: translateX(5px);
+    transition: transform 1s;
+}
+
+
 
 
 
