@@ -189,8 +189,8 @@ header nav .menu li a.activo, header nav .menu li a:hover{
 
 /* MAIN */
 main section.container{
-    padding-top: 3.125em;
-    padding-bottom: 3.125em;
+    padding-top: 2.125em;
+    padding-bottom: 2.125em;
 }
 
 main section h2{
@@ -235,7 +235,7 @@ main section .flex article{
 }
 
 main section .flex article:last-child{
-    border: 0px;
+    border-bottom: 0px;
 }
 
 main section article div i{
@@ -315,6 +315,86 @@ footer a{
     color: white;
     text-decoration: none;
 }
+
+@media(min-width: 48.063em)
+{
+    header .nav_top a span{
+        display: inline;
+        font-size: 70%;
+    }
+
+
+    main section .flex article{
+        width: 50%;
+        padding: 1.825em 1em;
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        margin-bottom:1em;
+    }
+
+    main section .flex article:last-child{
+        width: 100%;
+    }
+
+    main section .underline{
+        margin-bottom: 2em;
+    }
+
+
+}
+
+@media(min-width: 62.750em){
+
+    header .hamburguesa{
+        display: none;
+        float: none;
+    }
+
+    header nav .menu{
+        padding-top: 0px;
+        float: right;
+    }
+
+    header nav .menu li{
+        display: inline-block;
+        padding: 0.5em 1.250em;
+        text-align: left;
+        border-bottom: 0px;
+    }
+
+    header nav .menu li:last-child{
+        padding-right: 0;
+    }
+
+
+    main section .columna{
+        width: 50%;
+        padding: 1.25em 1em;
+    }
+
+
+}
+
+@media(min-width: 75.0625em )
+{
+      main section .flex article{
+        width: 33.33%;
+        
+      }  
+
+      main section .flex article:last-child{
+        width: 33.33%;
+     }
+
+     .hero>div{
+        color: white;
+        padding: 7% 3%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+}
+
 
 
 
