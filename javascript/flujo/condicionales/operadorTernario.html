@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operador ternario</title>
+</head>
+
+<body>
+
+    <script>
+
+        var nota = 3;
+        var mensaje = "";
+
+        if (nota >= 0 && nota < 5) {
+            mensaje = "suspenso";
+        } else {
+            mensaje = "aprobado";
+        }
+
+        //operador ternario
+        var otraNota = 4;
+        var otroMensaje = "";
+        otroMensaje = (otraNota>=0 && otraNota<5)?'suspenso':'aprobado';
+
+        var numeroA = 5;
+        var numeroB = 6;
+
+        //resta siempre positivo
+
+        var resultado = (numeroB>numeroA)? numeroB-numeroA : numeroA-numeroB;
+
+
+
+    </script>
+</body>
+
+</html>

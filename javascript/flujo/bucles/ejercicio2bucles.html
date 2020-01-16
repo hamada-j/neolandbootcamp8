@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+        //quiero hacer el mismo ejercicio de antes. pero....
+
+        //quiero poder elegir la cantidad de numeros que quiero contar.
+
+        //quiero poder elegir si quiero par o impar en el resultado
+
+        //quiero poder elegir por que numero empiezo.
+
+        var numeroFinal = parseInt(prompt('Dame el numero maximo'));
+        var numeroInicial = parseInt(prompt('Dame el numero inicial'));
+
+        var tipo = prompt('Dime que quieres, par o impar');
+
+        tipo = tipo.toLowerCase(); // toUpperCase();
+
+        //comprobar si lo que me meten es texto
+
+
+        for (var i = numeroInicial; i <= numeroFinal; i++) {
+            if (tipo == "par" && (i % 2 == 0)) {
+                document.write(i + "<br>")
+            } else if (tipo == "impar" && (i % 2 != 0)) {
+                document.write(i + "<br>")
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
