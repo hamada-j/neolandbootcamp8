@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tipos de datos</title>
+</head>
+
+<body>
+
+    <script>
+
+        //undefined
+
+        var alumno; //undefined
+
+        //STRING O CADENA DE CARACTERES
+
+        alumno = "Juan Antonio";
+
+        var apellido = 'Pérez';
+
+        var texto = '<div style="color: red" >our <strong>services</strong></div> ';
+
+        document.write(texto);
+
+        //numbers
+
+        var numeroA = 2;
+        var numeraRacional = 2.3;
+        var numeroNegativo = -4;
+
+        //null
+
+        alert(numeroA); //2
+
+        alert(typeof (numeroA)) //number
+
+        numeroA = 0; //typeof number
+        alumno = ""; // typeof string
+
+        alumno = null;
+
+        alert(alumno); //null
+        alert(typeof (alumno)); //object
+
+        //booleanos
+
+        var estado = true;
+        var otroEstado = false;
+
+        //concatenacion
+
+        var numeroB = 7;
+        var texto = 'Pepe';
+        var otroTexto = "Villuela";
+        var numeroTexto = "tres";
+
+        var resultado;
+
+
+        resultado = texto + otroTexto //"PepeVilluela";
+        resultado = texto + ' ' + otroTexto //"Pepe Villuela";
+        resultado = numeroB * numeroTexto; //NaN
+        alert(resultado);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
