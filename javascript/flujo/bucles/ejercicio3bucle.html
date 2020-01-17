@@ -20,6 +20,31 @@
 
         //quiero pintar una columna de n cuadrados y que tenga colores alternos pedidos por pantalla
 
+        var color1 = prompt('Dame un color en ingles');
+        var color2 = prompt('Dame otro color en ingles');
+        var ancho = prompt('Dame un ancho');
+        var alto = prompt('Dame un alto');
+        var porcentaje = prompt("Lo quieres en porcentaje?");
+        var numeroCuadrados = parseInt( prompt('Dame un numero de cuadrados'));
+        var color;
+        var siporcentaje = false;
+
+        //console.log(color1, color2, numeroCuadrados);
+
+        for(var i = 1; i <= numeroCuadrados; i++ )
+        {
+            color = (i%2!=0)?color1:color2;
+            
+            siporcentaje = (porcentaje == "si")? "%" : "px";
+            
+
+           var cuadrado = '<div style="background-color: '+color+'; width: '+ancho+''+siporcentaje+'; height: '+alto+'px; margin-bottom: 10px;"></div>';
+             
+           document.write(cuadrado);
+        }
+
+
+
     </script>
 
 </body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4</title>
+
+    <style>
+    
+        .cuadrado{
+            border-radius: 0%;
+            margin: 10px;
+        }
+
+        .circulo{
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .horizontal{
+            display: inline-block;
+        }
+
+        .vertical{
+            display: block;
+        }
+    
+    </style>
+</head>
+<body>
+
+
+    <script>
+        
+        //quiero una aplicación que me permita elegir entre pintar un cuadrado o un circulo.
+
+        // puedo elegir el color y el ancho.
+
+        //puedo elegir cuantos cuadrados y su disposicion vertical y horizontal
+
+
+        var poligono = prompt('¿Que quieres cuadrado o circulo?').toLowerCase();
+        var disposicion = prompt('¿Qué disposicion quieres, vertical u horizontal?').toLowerCase();
+
+        var color = prompt('Dime un color');
+        var ancho = prompt('Dame un ancho');
+        
+        var cantidad = parseInt( prompt('dime cuantos'));
+
+        var contenido = "";
+
+        for(var i = 1; i<= cantidad; i++)
+        {
+            contenido = contenido + '<div class="'+poligono+' '+disposicion+'" style="width: '+ancho+'px; height:'+ancho+'px; background-color: '+color+'"></div>';
+        }
+
+        document.write(contenido);
+
+    </script>
+    
+</body>
+</html>
