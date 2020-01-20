@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1 funciones</title>
+</head>
+<body>
+    
+   
+    <script>
+        
+        //crear una funcion que cada vez que sea llamada me cree una figura, circulo o cuadrado del color y tamaño que quiera.
+
+
+
+        function crearFigura(pPoligono, pColor, pTamano)
+        {
+                var radio = (pPoligono == "cuadrado")? 0 : 50;
+
+                var poligono = ' <div style="background-color: '+pColor+'; width: '+pTamano+'px; height: '+pTamano+'px; border-radius: '+radio+'%; margin: 10px"></div>';
+
+                document.write(poligono);
+        }
+
+        
+        
+        
+        
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculadora</title>
+</head>
+<body>
+    
+<script>
+
+        //realizar un programa que me permita recibir dos numeros cuales quiera y la operacion que quiero hacer por pantalla (suma resta y multiplicacion). Posteriormente me saque el resultado por pantalla.
+
+       
+
+            do {
+               var operacion = prompt('dime una operacion').toLowerCase();
+            } while (operacion != 'suma' && operacion != 'resta' && operacion != 'multiplicacion')
+
+
+        var primerNumero = parseFloat( prompt('Dime en el primer numero') ); //5
+        var segundoNumero = parseFloat( prompt('Dime segundo numero')); //7.2
+
+        calculadora(operacion, primerNumero, segundoNumero);
+
+       
+        function calculadora(pOperacion, pNumero1, pNumero2) {
+            var numeroA = pNumero1;
+            var numeroB = pNumero2;
+            switch (pOperacion) {
+                case 'suma':
+                    //realizo la suma
+                    sumar(numeroA, numeroB);
+                    break;
+
+                case 'resta':
+                    //realizo la resta
+                    restar(numeroA, numeroB);
+                    break;
+
+                case 'multiplicacion':
+                    //realizo la multiplicacion
+                    multiplicar(numeroA, numeroB);
+                    break;
+            }            
+        }
+
+
+        function sumar(pNumeroA, pNumeroB)
+        {
+            var resultado = pNumeroA + pNumeroB;
+            console.log(resultado);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function restar(pNumeroA, pNumeroB)
+        {
+            var resultado = pNumeroA - pNumeroB;
+            console.log(resultado);
+        }
+
+        function multiplicar(pNumeroA, pNumeroB)
+        {
+            var resultado = pNumeroA * pNumeroB;
+            console.log(resultado);
+        }
+
+
+
+</script>
+
+
+</body>
+</html>

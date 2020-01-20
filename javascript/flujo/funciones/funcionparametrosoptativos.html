@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>funcion parametros optativos</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        //declaracion function
+        var nombre = "Juan Antonio"
+
+        //reglas: los parametros optativos SIEMPRE, SIEMPRE van detras de los paremetros obligatorios
+        
+        function saludar(pNombre, pApellido, pTipo="Alumno")
+        {
+            document.write('hola ' + pNombre + " " + pApellido + ": " + pTipo);
+        }
+
+
+        //llamada 
+
+        saludar("Juan",'Perez', '');
+        
+    </script>
+</body>
+</html>
