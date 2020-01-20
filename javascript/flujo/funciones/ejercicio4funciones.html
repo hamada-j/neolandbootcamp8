@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        
+        //quiero un funcion que permita pintar cuadrados o circulos, puedo elegir el color y el tamaño, y tambien la cantidad y pintarlos en horizontal y vertical.
+        
+        // como vamos a probar que mi ejercicio funciona
+            //voy a ejecutar en consola la funcion crearFigura('cuadrado','red',100, 10, 'horizontal') -> CUIDADO horinzontal no es obligatorio.
+
+
+        //cosas que teneis que mirar 
+            // 1 como se crea un funcion
+            // 2 como se pasan paremetros obligatorios y optativos
+            // 3 return de valores.
+            // 4 bucles
+            // 5 condicionales.
+
+        function crearFigura(pTipo, pColor, pTamano){
+            var radio = 0;
+            if(pTipo == "circulo")
+            {
+                radio = 50;
+            }
+
+           return '<div style="background-color: '+pColor+'; width: '+pTamano+'px; height: '+pTamano+'px; border-radius: '+radio+'%; margin: 10px"></div>';
+
+        }
+
+        var figura = prompt('Dime que figura, circulo o cuadrado');
+        var ancho = prompt('Dime que ancho');
+        var colorcito = prompt('Dime que color');
+        var cantidad = prompt('cuantos quieres?');
+        var colocacion = prompt('horizontal o vertical');
+
+    
+        function pintarNfiguras(pCantidad, pDisposicion){
+
+            var disposicionFinal = (pDisposicion == "horizontal")? "flex": "block"
+            var contenedorFiguras = '<div style="display: '+disposicionFinal+'">';
+
+                for(var i = 1; i<= pCantidad; i++)
+                {
+                    contenedorFiguras += crearFigura(figura,colorcito,ancho);
+                }
+
+                contenedorFiguras += '</div>';
+
+                document.write(contenedorFiguras);
+
+        }
+
+        pintarNfiguras(cantidad, colocacion);
+
+    </script>
+    
+</body>
+</html>
