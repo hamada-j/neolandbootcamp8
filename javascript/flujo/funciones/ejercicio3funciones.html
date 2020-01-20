@@ -15,8 +15,38 @@
             // precioVaquero = 10
 
             // PVP  = precioVaquero + margenTienda + IVA;
-        
-        
+
+            // IVAproducto -> (precioVaquero * (21 /100) )
+
+            // margen en porcentaje (precioVaquero * (margen / 100));
+
+            function calcularIvaProducto(pPrecioProducto, pImpuesto){
+                return pPrecioProducto* (pImpuesto /100);
+            }
+
+            function calcularMargen(pPrecio , pPorcentajeMargen)
+            {
+                return pPrecio * (pPorcentajeMargen / 100);
+            }
+
+
+            function pintarPrecio(pPrecio)
+            { 
+                document.write(pPrecio);
+            } 
+
+            function calcularPrecioPvp(pPrecioProducto, pMargen, pIva) {
+
+                    var margen = calcularMargen(pPrecioProducto, pMargen);
+
+                    var precioMasMargen = pPrecioProducto + margen;
+
+                    var ivaMiproducto = calcularIvaProducto(precioMasMargen, pIva)
+
+                    var pvp = precioMasMargen + ivaMiproducto;
+                    pintarPrecio(pvp);
+            }
+            
         
     </script>
 
