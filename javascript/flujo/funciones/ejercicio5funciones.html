@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 5 funciones</title>
+</head>
+<body>
+
+    <script>
+        
+            //vamos hacer una aplicacion de control stock de una tienda:
+            
+            //crear una varible que almacene el stock global e inicializarla a 125;
+
+            var stock = 125;
+
+            //quiero una funcion que me saque a través de alert el stock que tengo; solo la declaracion y lo probais en consola.
+            
+
+            function mostrarStock()
+            {
+                console.log('mi stock es ' + stock);
+            }
+
+            //quiero una funcion que permita al usuario final comprar productos la cantidad de productos la recibo por parametro.
+
+            function comprarProducto(pCantidad)
+            {
+                if(pCantidad > stock)
+                {
+                    console.log('No hay suficiente producto, solo puedes comprar ' + stock);
+                }
+                else{
+                    stock = stock - pCantidad;
+                }
+                
+            }
+
+            //funcion que me permita añadir productos al stock, los que yo quiera
+
+            function addStock(pCantidad)
+            {
+                stock = stock + pCantidad;
+                mostrarStock();
+            }
+
+
+            //funcion que me permita lanzar un mensaje al administrador por console diciendo que el stock es menor que 5 unidades. 
+
+            //y ejecutarlo cuando sea necesario;
+
+            function comprobarStock(){
+
+            }
+
+
+            //funcion estado del mi tienda, quiero que saque por pantalla el stock total que tengo, la cantidad de elementos de la ultima venta ejecutada por el usuario, y la cantida de producto añadido al stock en el ultimo pedido.
+
+
+            
+
+
+
+
+        
+        
+        
+    </script>
+
+
+    
+</body>
+</html>
