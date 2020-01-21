@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Funciones anonimas</title>
 </head>
 <body>
+
+    <script>
+            var numero = 3;
+            var paridad;
+
+            paridad = function(pNumero){
+                var resultado = "impar";
+                if(pNumero%2 == 0)
+                {
+                    resultado = "par"
+                }
+
+                return resultado;
+            }
+
+
+           document.write(paridad(4)); //par
+
+            var ultimoValor = paridad(4);
+            
+
+            console.log(paridad(numero)); //impar
+
+
+            //arrow function o funcion flecha, es un funcion anonima pintada de otra forma
+
+
+             paridad = pNumero => {
+                    var resultado = "impar";
+                    if (pNumero % 2 == 0) {
+                        resultado = "par"
+                    }
+
+                    return resultado;
+            }
+
+
+            mensaje = (pNombre, pApellido) =>  "Hola " + pNombre + " " + pApellido;
+
+            suma = (pNumero1, pNumero2) => pNumero1 + pNumero2;
+            
+
+
+
+
+
+
+    
+    
+    </script>
     
 </body>
 </html>

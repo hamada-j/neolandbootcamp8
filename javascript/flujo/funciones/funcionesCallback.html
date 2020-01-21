@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones Callback</title>
+</head>
+<body>
+    
+    <script>
+        
+
+        //funcion que recibe como parametro otra funcion.
+
+        //opcion 1
+
+            function saludar(pNombre)
+            {
+                console.log('Hola ' + pNombre);
+            }
+            
+
+            //voy a simular una funcion que pide un nombre a BBDD
+
+            function obtenerNombre()
+            {
+                var nombre
+                nombre = "Pepe";                
+                return nombre;
+            }
+
+            saludar( obtenerNombre() ) //callback
+
+
+            //opcion 2
+
+
+            function presentarse(fn)
+            {
+                fn(3,4);
+            }
+
+            presentarse( function(pNumero1, pNumero2) {
+                console.log(pNumero1 + pNumero2)
+            })
+
+    
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diferencias entre LET y VAR</title>
+</head>
+<body>
+    
+
+    <script>
+    
+            var nombre = "Juan Antonio";
+            let apellido = "Pérez";
+            var nota = 5;
+            //variables globales
+
+            function saludar(){
+                var numeroSaludos = 5;
+                let p = 4
+                //varibles locales
+            }    
+
+            console.log(numeroSaludos); 
+    
+
+            if(nota < 5)
+            {
+                var valor = "pepe"; //global
+                let otroValor = 3; //local en el if
+            }
+
+
+            for(var i = 0; i<10; i++)
+            {
+                console.log(i);
+            }
+
+            for(var j = 0; j<10; j++)
+            {
+                consolelog(j)
+            }
+
+            for(let i = 0; i<10; i++)
+            {
+                
+            }
+    
+    
+    </script>
+</body>
+</html>

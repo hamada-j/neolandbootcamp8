@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica let </title>
+</head>
+<body>
+
+
+    <script>
+    
+        //realizar dos funciones, que me calcule la potencia de dos numeros, 
+        //otra funcion que pinte en el documento el valor potencia.
+
+
+        function potencia(pBase, pExponente) //Alberto
+        {
+            let resultado = pBase ** pExponente;
+
+            return resultado;
+        }
+
+        function pintarResultado(pAlgoQuePintar) //Juan
+        {
+            document.write(pAlgoQuePintar+ '<br>');
+        }
+
+        function sumar(pPrimerNumero, pSegundoNumero) //Kate
+        {
+            var resultado = pPrimerNumero + pSegundoNumero;
+            return resultado;
+        }
+    
+        var datoAlberto = potencia(2,3);
+
+        pintarResultado(datoAlberto)
+
+        var datoKate = sumar(7,2);
+
+        pintarResultado(datoKate);
+
+    
+    </script>
+    
+</body>
+</html>

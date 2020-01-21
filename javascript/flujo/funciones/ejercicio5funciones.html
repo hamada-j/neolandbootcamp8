@@ -15,14 +15,18 @@
             //crear una varible que almacene el stock global e inicializarla a 125;
 
             var stock = 125;
+            var cantidadUltimaCompra = 0;
+            var cantidadUltimoPedido = 0;
 
             //quiero una funcion que me saque a través de alert el stock que tengo; solo la declaracion y lo probais en consola.
             
 
             function mostrarStock()
             {
-                console.log('mi stock es ' + stock);
+               console.log( 'mi stock es ' + stock);
             }
+        
+
 
             //quiero una funcion que permita al usuario final comprar productos la cantidad de productos la recibo por parametro.
 
@@ -34,8 +38,12 @@
                 }
                 else{
                     stock = stock - pCantidad;
+                    cantidadUltimaCompra = pCantidad;
+                    
                 }
+                comprobarStock();
                 
+
             }
 
             //funcion que me permita añadir productos al stock, los que yo quiera
@@ -43,6 +51,7 @@
             function addStock(pCantidad)
             {
                 stock = stock + pCantidad;
+                cantidadUltimoPedido = pCantidad;
                 mostrarStock();
             }
 
@@ -52,15 +61,20 @@
             //y ejecutarlo cuando sea necesario;
 
             function comprobarStock(){
-
+                const STOCK_MINIMO = 5;
+                if(stock > 0 && stock < STOCK_MINIMO)
+                {
+                    console.log('tu stock es de ' + stock +', seria recomendable comprar producto');
+                }
             }
 
 
-            //funcion estado del mi tienda, quiero que saque por pantalla el stock total que tengo, la cantidad de elementos de la ultima venta ejecutada por el usuario, y la cantida de producto añadido al stock en el ultimo pedido.
+            //funcion estado del mi tienda, quiero que saque por pantalla el stock total que tengo, la cantidad de elementos de la ultima venta ejecutada por el usuario, y la cantidad de producto añadido al stock en el ultimo pedido.
 
-
-            
-
+       
+            function dameEstadoTienda(){
+                console.log(' Tu stock actual es de '+stock+', la ultima compra que te hicieron es de '+cantidadUltimaCompra+' productos y el ultimo pedido que realizaste es de ' + cantidadUltimoPedido);
+            }
 
 
 

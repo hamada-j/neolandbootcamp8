@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculadora</title>
+</head>
+<body>
+
+
+    <script>
+            var suma = 0;
+            var resta = 0;
+            function calculadora(pOperacion, pNumero1, pNumero2)
+            {
+                var primerNumero = pNumero1;
+                var segundoNumero = pNumero2;
+                switch (pOperacion) {
+                    case 'suma':
+                            suma = sumar(primerNumero, segundoNumero);
+                        break;
+                
+                   case 'resta':
+                            resta = restar(primerNumero, segundoNumero);
+                        break;
+                }
+            }
+
+            function sumar(pNumeroA, pNumeroB)
+            {
+                return pNumeroA + pNumeroB;
+            }
+
+            
+            function restar(pNumeroA, pNumeroB) {
+                return pNumeroA - pNumeroB;
+            } 
+    
+    
+    
+    </script>
+    
+</body>
+</html>
