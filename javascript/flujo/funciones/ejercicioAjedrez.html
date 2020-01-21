@@ -7,10 +7,49 @@
     <title>Ejercicio Ajedrez</title>
 </head>
 <body>
-
-    <script>
-        
+  
+   
+     <script>
         //quiero pintar un tablero de ajedrez, dicho tablero tendrá el numero de casillas que decida el usuario por pantalla, podré tambien elegir el tamaño de la casilla.
+        
+        function crearFila(pAnchoCasilla,pNumeroCasillas, pColorInicio)
+        {
+            let anchoFila = pAnchoCasilla * pNumeroCasillas;
+            let fila = '<div style="max-width: '+ anchoFila+'px; display:flex ">';
+            for(let i = 1; i<=pNumeroCasillas; i++)
+            {
+                let color = "";
+                if(pColorInicio == "#999")
+                {
+                     color = (i % 2 == 0) ? "black" : "#999";
+                }
+                else{
+                     color = (i % 2 == 0) ? "#999" : "black";
+                }
+            
+               fila += '<div style="background-color: '+color+'; width: '+pAnchoCasilla+'px; height: '+pAnchoCasilla+'px;"></div>';
+            }
+
+                fila += '</div>';
+
+                document.write(fila);
+
+        }
+
+       function crearTablero(pNumeroCasillas, pTamano){
+            
+            for(let i = 1; i<= pNumeroCasillas; i++)
+            {
+                let colorInicial = (i%2==0)?'black':'#999';
+                crearFila(pTamano,pNumeroCasillas,colorInicial);
+            }
+
+       }
+
+       var tamanoCasilla = parseInt(prompt('Dime el tamaño de la casilla'));
+       var numeroCasillas =  parseInt(prompt('Dime cuantas casillas'));
+
+       crearTablero(numeroCasillas, tamanoCasilla);
         
        
         

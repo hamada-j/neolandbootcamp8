@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Aritmetica</title>
+</head>
+<body>
+
+    <script>
+        
+        console.log(media(2,3,4)); //3
+        var resultadoMedia2 = media(8,2,3,2,3); //3.6 
+        media(10,10,10,10,5,5,20,10); //10
+
+        function media(){
+            let numeroTotal = arguments.length;
+            let sumaTotal = 0;
+            for(let i=0; i< numeroTotal; i++)
+            {
+                sumaTotal += arguments[i];
+            }
+
+            let resultado = sumaTotal / numeroTotal;
+
+           return resultado;
+
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

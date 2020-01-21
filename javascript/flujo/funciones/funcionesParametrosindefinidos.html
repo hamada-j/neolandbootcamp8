@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     sumar(2, 4);
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funcion con parametros indefinidos</title>
+</head>
+<body>
+    
+    
+
+<script>
+
+      
+     var segundaSuma = sumar(2.56,79,2,1,34,66,8,9);
+
+     console.log(sumar(2, 3, 4, 6));
+
+     function sumar()
+     {
+         //arguments es una lista que se numero 0 a N-1 siendo N la longitud de la lista.
+         var argumentos = arguments.length; //la cantidad total de valores en la lista
+            let suma = 0;
+            for(let i = 0 ; i< arguments.length ; i++)
+            {
+                suma = suma + arguments[i]
+            }
+
+            return suma;
+     }
+
+     
+
+</script>
+   
+
+
+</body>
+</html>

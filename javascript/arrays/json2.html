@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON 2</title>
+</head>
+<body>
+    
+
+    <script>
+        
+            var alumno = {
+                nombre: 'Juan',
+                apellido: 'Perez',
+                edad: 37,
+                sexo: 'Masculino',
+                matricula: 'A23456',
+                estado : true,
+                asignaturas: ['Matematicas','Fisica','Lengua'],
+                profesores: {
+                    matematicas: 'Don Pepe',
+                    fisica: "Don Eurelio",
+                    lengua: 'Don Emiliano'
+                },
+                mostrarMatricula: function(){
+                    console.log( this.matricula);
+                },
+            }   
+            
+            //alumno.nombre
+            //alumno.edad
+
+            //listado de asignaturas
+
+                //alumno.asignaturas ARRAY DE ELEMENTOS
+                //alumno.asignaturas[0] //Matematicas
+
+
+            //profesor de fisica
+
+                //alumno.profesores.fisica
+
+
+            alumno.mostrarMatricula();
+        
+        
+    </script>
+</body>
+</html>

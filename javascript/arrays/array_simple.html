@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Simple</title>
+</head>
+<body>
+
+
+    <script>
+        
+        var listaAlumnos = new Array();
+        //var listaAlumnos = []; 
+        
+        listaAlumnos = ['Kate','Antxon', 'Alberto', 'Roberto'];
+
+        //longitud: es la cantidad de elementos que hay en un listado
+
+        var longitud = listaAlumnos.length;
+
+        //podemos acceder a un elemento por su posicion dentro de la lista sabiendo que un array se numero de 0 a n-1 siendo n la longitud de un array;
+        console.log(listaAlumnos[2]); //Alberto
+
+        //listaAlumnos = ['Kate', 'Antxon', 'Alberto', 'Roberto'];
+        var listaHTML = '<ul>';
+
+            for(let i = 0; i < listaAlumnos.length; i++)
+            {
+                listaHTML += '<li>'+listaAlumnos[i]+'</li>'
+            }
+
+
+
+            listaHTML += '</ul>';
+
+            document.write(listaHTML);
+
+
+        
+    </script>
+    
+</body>
+</html>

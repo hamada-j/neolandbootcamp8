@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FOR OF</title>
+</head>
+<body>
+
+    <script>
+        
+        var animales = new Array('Gato','Perro','Periquito', 'Colibri', 'Aguila');
+
+        var contador = 1;
+        for(animal of animales){
+
+            var color = (contador%2!=0)?'green':'red';
+
+            document.write('<p style="color:'+color+'">'+animal+'</p>');
+
+            contador++;
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
