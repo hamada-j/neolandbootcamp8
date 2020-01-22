@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JSON - Array Asociativo</title>
 </head>
+
 <body>
-    
+
     <script>
-        
-            var producto = {
-                titulo : 'Leche Desnatada',
-                precio : 0.80,
-                capacidad : 1,
-                stock: true
-            };
 
-            console.log(producto);
+        var producto = {
+            titulo: 'Leche Desnatada',
+            precio: 0.80,
+            capacidad: 1,
+            stock: true
+        };
 
-            //opcion 1  nomenclatura de corchete
+        console.log(producto);
 
-                console.log( producto['titulo'] )
+        //opcion 1  nomenclatura de corchete
 
-            //opcion 2 nomenclatura de punto
+        console.log(producto['titulo'])
 
-                console.log( producto.precio )
+        //opcion 2 nomenclatura de punto
+
+        console.log(producto.precio)
 
 
-            //for in especial para recorrer json ya que permite usar las claves para pintar como literal
+        //for in especial para recorrer json ya que permite usar las claves para pintar como literal
+        producto.fechaCaducidad = '14/03/2020';
 
-                for(clave in producto){
-                    document.write( clave + ": " + producto[clave] + "<br>" )
-                }        
+        for (clave in producto) {
+            document.write(clave + ": " + producto[clave] + "<br>")
+        }
+
+
+
+        console.log(producto);   
     </script>
 
 </body>
+
 </html>

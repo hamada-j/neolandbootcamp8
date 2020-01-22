@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SLICE</title>
+</head>
+
+<body>
+
+    <script>
+
+        var listaAnimales = new Array('Perro', 'Gato', 'Aguila', 'Hipopotamo', 'Periquito');
+
+
+        //me permite captura uno o varios elementos de un array en la posicion que yo quiera. Si son varios seran consecutivos.
+
+
+        var listaAnimalesDomesticos = new Array();
+
+
+        listaAnimalesDomesticos = listaAnimales.slice(0, 2);
+
+        console.log(listaAnimalesDomesticos);
+        console.log(listaAnimales);
+
+        var otraLista = new Array();
+
+        otraLista = listaAnimales.slice(2, 4)
+
+        //ultimo elemento
+
+
+        var otraLista2 = listaAnimales.slice(4, 5)
+
+        console.log(otraLista2); // periquito
+        var otraLista2 = listaAnimales.slice(-1);//periquito
+
+        console.log(otraLista2);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

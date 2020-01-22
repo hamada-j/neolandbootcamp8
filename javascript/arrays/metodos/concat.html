@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CONCAT</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //concatener o juntar arrays
+
+
+
+        var verduras = new Array('Lechuga', 'Pimientos', 'Guisantes');
+        var carnes = new Array('Pollo', 'Ternera');
+        var pescados = new Array('Lubina', 'Merluza');
+
+        //opcion 1
+
+        var listaCompra = new Array();
+        listaCompra = carnes.concat(pescados, verduras);
+
+        console.log(listaCompra);
+
+        //opcion 2
+
+        var otraLista = new Array();
+
+        otraLista = carnes.concat(pescados).concat(verduras);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

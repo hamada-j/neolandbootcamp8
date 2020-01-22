@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multidimensional JSON</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //BBDD de alumnos de una escuela.
+
+        var alumno1 = {
+            nombre: 'Juan',
+            edad: 37,
+            notamedia: 9
+        }
+
+        var alumno2 = {
+            nombre: 'Elena',
+            edad: 22,
+            notamedia: 10
+        }
+
+        var alumno3 = {
+            nombre: 'Pepe',
+            edad: 30,
+            notamedia: 4.5
+        }
+
+        var alumno4 = {
+            nombre: 'Almudena',
+            edad: 14,
+            notamedia: 3
+        }
+
+
+        var listaAlumnos = new Array();
+
+        listaAlumnos = [alumno4, alumno2, alumno3, alumno1];
+
+        // var notamedia = listaAlumnos[2]['notamedia']
+        // var otranotamedia = listaAlumnos[2].notamedia;
+        // console.log(otranotamedia);
+
+        for (alumno of listaAlumnos) {
+            console.log(alumno.nombre);
+            console.log(alumno['nombre']);
+        }
+
+
+        for (let i = 0; i < listaAlumnos.length; i++) {
+            console.log(listaAlumnos[i].edad);
+            console.log(listaAlumnos[i]['edad']);
+        }
+
+    </script>
+
+</body>
+
+</html>

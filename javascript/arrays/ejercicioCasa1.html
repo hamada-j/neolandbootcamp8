@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
 
 
     <script>
-        
+
         //crear un lista de secciones de una web, de la cantidad de elementos que vosotros querais.
-        
+        var listaSecciones = new Array('HOME', 'SERVICIOS', 'GALERIA', 'EQUIPO');
         //pintar la lista en nav de html formado por el texto de la seccion y el enlace será la seccion.html
 
         //ejemplo 
-         // (home,servicios,contacto,galeria) 
+        // (home,servicios,contacto,galeria) 
 
-                //<li><a href="home.html">home</a></li>
-        
-        
+        //<li><a href="home.html">home</a></li>
+
+
+        function pintarMenu(pListaSecciones) {
+            var menu = "<header><nav><ul>"
+
+            for (let i = 0; i < pListaSecciones.length; i++) {
+                let url = pListaSecciones[i].toLowerCase() + ".html";
+                menu += '<li><a href="' + url + '">' + pListaSecciones[i] + '</a></li>';
+            }
+
+            menu += "</ul></nav></header>";
+
+            document.write(menu);
+        }
+        pintarMenu(listaSecciones);
+
     </script>
-    
+
 </body>
+
 </html>
