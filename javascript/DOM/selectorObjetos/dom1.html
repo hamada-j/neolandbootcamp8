@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 1</title>
+</head>
+
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi incidunt expedita praesentium officiis! Facilis
+        animi neque, odit, molestias doloremque adipisci esse minima saepe, natus reprehenderit ducimus maiores qui quos
+        vel?
+    </p>
+
+    <p>
+        <strong>Hola</strong> k <em>ase</em>
+    </p>
+
+    <p>
+        hasta luego lucas!!!!
+    </p>
+
+
+
+    <script>
+
+        var parrafos = document.getElementsByTagName('p');
+
+        function cargarTexto() {
+            parrafos[0].innerHTML = "<strong>MAGIA!!!!</strong>";
+        }
+
+
+        console.log(parrafos[1].innerHTML);
+
+        parrafos[1].innerHTML = "<p>Juan se ha vuelto loco</p>";
+
+        console.log(parrafos[3])
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

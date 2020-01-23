@@ -217,19 +217,52 @@
 
         }
 
-        var edadMinima = parseInt(prompt('Dime la edad minima'));
-        var edadMaxima = parseInt(prompt('Dime la edad maxima'));
-        pintarPacientes(filtrarXEdad(listaPacientes, edadMinima, edadMaxima));
+        // var edadMinima = parseInt(prompt('Dime la edad minima'));
+        // var edadMaxima = parseInt(prompt('Dime la edad maxima'));
+        // pintarPacientes(filtrarXEdad(listaPacientes, edadMinima, edadMaxima));
 
 
 
         //quiero poder hacer un filtro donde pueda seleccionar pacientes que tenga una enfermedad y un rango de edad concreto.
+        function busqueda(pListaPacientes, pTipo, pEdadMinina, pEdadMaxima) {
+            var listaEnfermos = pListaPacientes.filter(paciente => paciente.diagnostico.toLowerCase() == pTipo.toLowerCase() && paciente.edad >= pEdadMinina && paciente.edad <= pEdadMaxima)
+
+            return listaEnfermos;
+        }
+
+
+        var listaFiltrada = busqueda(listaPacientes, 'gripe', 18, 25)
+
+
+
+        //opcion 2
+
+        // var listaEdad = filtrarXEdad(listaPacientes, 18, 35);
+        // var listaSuperFiltro = filtrarXdiagnostico(listaEdad, 'gripe');
+        // pintarPacientes(listaSuperFiltro);
+
+
+
+        pintarPacientes(filtrarXEdad(filtrarXdiagnostico(listaPacientes, 'gripe'), 18, 35));
 
 
 
         //quiero filtrar los pacientes cuyo numero de ss acabe en cero.
 
 
+        // var nombre = "juan";
+
+        // console.log('longitud', nombre[ nombre.length-1 ]);
+
+
+        function filtrarNumeroSS(pListaPacientes, pCaracter) {
+
+            var listaFiltrada = new Array();
+
+            listaFiltrada = pListaPacientes.filter(paciente => paciente.numeroSS.slice(-1) == pCaracter);
+
+            return listaFiltrada;
+        }
 
 
 

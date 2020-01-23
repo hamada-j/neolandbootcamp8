@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+
+    <style>
+        .alex {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <ul>
+        <li>Pepe</li>
+        <li>Lucia</li>
+        <li>Juan</li>
+    </ul>
+
+    <ul>
+        <li>Este no tiene que cambiar</li>
+    </ul>
+
+    <script>
+
+        //quiero que me sustituyais todos los texto de los lis, por los elementos de este array
+
+        var secciones = new Array('Home', 'Galeria', 'Contacto');
+
+        var ul = document.getElementsByTagName('ul');
+
+        var primerListado = ul[0];
+
+        var lis = primerListado.getElementsByTagName('li');
+        var contador = 0;
+        for (li of lis) {
+            li.innerText = secciones[contador];
+            li.style.backgroundColor = "red"
+            li.title = "VAMOSSSSSS A COMERRRRR";
+            li.className = "alex";
+            contador++;
+        }
+
+    </script>
+
+</body>
+
+</html>

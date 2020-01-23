@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1 metodos</title>
+</head>
+
+<body>
+
+    <script>
+
+        var agendaContactos = [
+            {
+                nombre: "Juan",
+                telefono: 8765432,
+                email: 'profesor@gmail.com'
+            },
+            {
+                nombre: "Pepe",
+                telefono: 5634573,
+                email: 'pepe@profesor.com'
+            },
+            {
+                nombre: "Lucia",
+                telefono: 1122334,
+                email: 'lucia@gmail.com'
+            },
+
+        ]
+
+
+        var listaFiltrada = new Array();
+
+        listaFiltrada = agendaContactos.filter((contacto) => {
+            return contacto.email.includes('profesor')
+        })
+
+        console.log(listaFiltrada);
+
+
+
+    </script>
+
+</body>
+
+</html>

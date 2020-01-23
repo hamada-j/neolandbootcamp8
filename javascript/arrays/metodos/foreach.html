@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FOR EACH</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var listaAlumnos = [
+            {
+                nombre: "Juan",
+                edad: 34
+            },
+            {
+                nombre: "Pepe",
+                edad: 40
+            },
+            {
+                nombre: "Lucia",
+                edad: 34
+            },
+        ]
+
+        //bucle for disfrazado de metodo, su uso esta encaminado a que cuando tengamos lista del cualquier tipo, la recorramos sin tener que hacer for endenados.
+
+
+        listaAlumnos.forEach(paciente => {
+            document.write(paciente.nombre);
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 2</title>
+
+    <style>
+        .rojo {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="http:/www.google.com">Contacto</a></li>
+        <li><a href="">Galeria</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="">Aviso Legal</a></li>
+        <li><a href="">Cookies</a></li>
+    </ul>
+
+    <script>
+
+        //cambiar los href del menu por un enlace en el que todos te lleven a la pagina de amazon. tiene que abrirse en un pagina 
+
+        //introduce en el elemento contacto una clase que lo ponga en rojo.
+
+
+        var menu = document.getElementById('menu');
+
+        var items = menu.getElementsByTagName('a');
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].href = "http://www.raphaelfans.com/home.html";
+            items[i].target = "_blank";
+
+            if (items[i].innerText == "Contacto") {
+                items[i].className = "rojo";
+
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
