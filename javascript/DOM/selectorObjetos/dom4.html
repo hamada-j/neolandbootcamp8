@@ -10,6 +10,8 @@
 
 <body>
 
+
+
     <section>
         <h2>BLOG</h2>
 
@@ -21,19 +23,82 @@
 
         post = [
             {
-                titulo: "dsijghoasif";
-                texto: "sadifoijsd",
-                imagen: "http: //"
+                id: 1,
+                titulo: "Titulo noticia 1",
+                texto: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit? Accusamus quos deserunt architecto similique sequi quaerat culpa. Accusamus rerum assumenda nemo quis natus explicabo blanditiis minima laboriosam deserunt maxime!",
+                imagen: "images/imagen_1.jpg"
+            },
+            {
+                id: 2,
+                titulo: "Titulo noticia 2",
+                texto: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit? Accusamus quos deserunt architecto similique sequi quaerat culpa. Accusamus rerum assumenda nemo quis natus explicabo blanditiis minima laboriosam deserunt maxime!",
+                imagen: "images/imagen_2.jpg"
+            },
+            {
+                id: 3,
+                titulo: "Titulo noticia 3",
+                texto: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit? Accusamus quos deserunt architecto similique sequi quaerat culpa. Accusamus rerum assumenda nemo quis natus explicabo blanditiis minima laboriosam deserunt maxime!",
+                imagen: "images/imagen_3.jpg"
             },
 
         ]
 
         //quiero por favor una funcion que me permita pintar la noticia del post que yo quiera por pantalla dentro de la section
 
+
+        function pintarNoticia(pListaNoticias, pId) {
+            var secciones = document.getElementsByTagName('section');
+            var miSeccionBlog = secciones[0];
+
+            var unaNoticia = pListaNoticias.find(noticia => {
+                return noticia.id == pId;
+            })
+
+            miSeccionBlog.innerHTML += '<article><h3>' + unaNoticia.titulo + '</h3><p>' + unaNoticia.texto + '</p><img src="' + unaNoticia.imagen + '" alt="' + unaNoticia.titulo + '"></article>'
+        }
+
         //quiero por favor que creeis una una funcion que pinte varias noticias, como parametro va el numero de noticias a pintar.
+
+        function pintarNoticias(pListaNoticias, pNumeroNoticias, pOrden = "asc") {
+
+            if (pOrden != "asc") {
+                pListaNoticias.reverse();
+            }
+
+            for (let i = 0; i < pNumeroNoticias; i++) {
+                var idNoticia = pListaNoticias[i].id
+
+                pintarNoticia(pListaNoticias, idNoticia);
+
+            }
+        }
+
+        pintarNoticias(post, 3, 'desc')
 
 
         //quiero funcion que me permita borrar una noticia , o la ultima o la que yo elija
+
+        function borrarNoticia(pListaNoticias, pId) {
+            var noticiaBorrar = pListaNoticias.find((noticia) => {
+                return noticia.id == pId;
+            })
+
+
+            //splice necesito la posicion del objeto capturado en la variable listaBorrar
+
+            var posicionNoticia = pListaNoticias.findIndex((noticia) => {
+                return noticia.id == noticiaBorrar.id
+            });
+
+            pListaNoticias.splice(posicionNoticia, 1);
+
+
+            var seccion = document.getElementsByTagName('section')[0];
+            seccion.innerHTML = "<h2>BLOG</h2>";
+
+            pintarNoticias(pListaNoticias, pListaNoticias.length);
+
+        }
 
 
     </script>
