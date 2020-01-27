@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos injectados</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li data-color="blue" onclick="cargarColor(this)">Azul</li>
+        <li data-color="tomato" onclick="cargarColor(this)">Rojo</li>
+        <li data-color="ligthyellow" onclick="cargarColor(this)">Amarillo</li>
+    </ul>
+
+
+    <script>
+
+        function cargarColor(objeto) {
+
+            var color = objeto.dataset.color;
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

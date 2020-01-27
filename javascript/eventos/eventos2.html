@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mover elementos por pantalla</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="irIzquierda()">IZQUIERDA</button><button onclick="irDerecha()">DERECHA</button>
+
+
+    <div class="cuadrado"></div>
+
+    <script>
+
+        //10px siempre a cualquier lado
+
+        //pasos a seguir:
+        //paso 1: identificar quien acciona el evento y sobre quien
+        //paso 2: identificar el tipo de evento
+        //paso 3: crear la funcion que lanza el evento.
+        //paso 4: parametros que necesito para realizar la acción.
+
+        var cuadrado = document.querySelector('.cuadrado');
+        var avance = 0;
+
+        function irIzquierda() {
+            avance = avance - 100; //avance -= 10
+            cuadrado.style.transform = avance + 'px';
+        }
+
+        function irDerecha() {
+            avance = avance + 100; //avance += 10
+            cuadrado.style.marginLeft = avance + 'px';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

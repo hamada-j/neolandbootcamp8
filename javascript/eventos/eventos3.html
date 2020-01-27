@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listeners</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li data-color="blue">Azul</li>
+        <li data-color="green">Verde</li>
+        <li data-color="red">Rojo</li>
+        <li data-color="indigo">Violeta</li>
+    </ul>
+
+
+    <script>
+
+        var lis = document.querySelectorAll('#menu li');
+
+        for (li of lis) {
+            li.addEventListener('click', recogerColor)
+        }
+
+
+        function recogerColor(e) {
+
+            var color = e.target.dataset.color;
+
+
+            //e.target.style.backgroundColor = color;
+
+            document.body.style.backgroundColor = color;
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
