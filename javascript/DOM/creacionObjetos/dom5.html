@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crear y eliminar objetos DOM </title>
+
+    <style>
+        .articulo {
+            padding: 10px;
+            background-color: coral;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="contactos">
+
+        <!-- <article>
+            <h3>Nombre del contacto</h3>
+            <ul>
+                <li>Telefono: 65432474</li>
+                <li>Email: email@gmail</li>
+            </ul>
+        </article> -->
+
+
+    </section>
+
+
+    <script>
+
+        var id = 1;
+
+        function addContact(pNombre, pTelefono, pEmail) {
+
+            //creamos los lis
+
+            var liTelefono = document.createElement('li');
+            var liEmail = document.createElement('li');
+
+            var telefono = document.createTextNode('Telefono: ' + pTelefono)
+            var email = document.createTextNode('Email: ' + pEmail);
+
+            liTelefono.appendChild(telefono);
+            liEmail.appendChild(email);
+
+
+            //crear el ul
+
+            var ul = document.createElement('ul');
+
+            ul.appendChild(liEmail);
+            ul.appendChild(liTelefono);
+
+            //creacion del h3
+
+            var h3 = document.createElement('h3');
+            h3.style.color = "red";
+            var titulo = document.createTextNode(pNombre);
+
+            h3.appendChild(titulo);
+
+            //creo el article
+
+            var article = document.createElement('article');
+            article.className = "articulo";
+            article.id = "articulo_" + id;
+            article.appendChild(h3);
+            article.appendChild(ul);
+
+
+
+
+            var miSeccion = document.getElementById('contactos');
+
+            miSeccion.appendChild(article);
+
+
+            id++;
+        }
+
+
+        function deleteContact(pId) {
+
+            var contactoBorrar = document.getElementById('articulo_' + pId);
+
+            contactoBorrar.parentNode.removeChild(contactoBorrar);
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

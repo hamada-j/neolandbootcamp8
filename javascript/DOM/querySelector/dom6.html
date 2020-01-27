@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Query Selector</title>
+</head>
+
+<body>
+
+    <section>
+        <article class="articulo">
+            <h3>Titulo del articulo 1</h3>
+        </article>
+        <article class="articulo">
+            <h3>Titulo del articulo 2</h3>
+        </article>
+        <article class="articulo">
+            <h3>Titulo del articulo 3</h3>
+        </article>
+    </section>
+
+    <section>
+        <h3>Titulo de la seccion </h3>
+    </section>
+    <script>
+
+        var titulos = document.querySelectorAll('.articulo h3');
+
+        var ultimoTitulo = document.querySelector('.articulo:nth-child(1) h3');
+
+        ultimoTitulo.innerText = "HOla"
+
+
+    </script>
+</body>
+
+</html>

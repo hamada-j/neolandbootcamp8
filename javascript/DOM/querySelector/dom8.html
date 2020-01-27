@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>query selector</title>
+
+    <style>
+        .negro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="servicios">
+
+        <p id="p_1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente nam voluptatem fuga, cum rerum
+            natus
+            temporibus repudiandae autem aspernatur quibusdam error quia, fugiat sunt sequi reprehenderit illum
+            consectetur perspiciatis sint.</p>
+        <p id="s_1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente nam voluptatem fuga, cum rerum
+            natus
+            temporibus
+            repudiandae autem aspernatur quibusdam error quia, fugiat sunt sequi reprehenderit illum consectetur
+            perspiciatis
+            sint.</p>
+
+        <p id="p_2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente nam voluptatem fuga, cum rerum
+            natus
+            temporibus
+            repudiandae autem aspernatur quibusdam error quia, fugiat sunt sequi reprehenderit illum consectetur
+            perspiciatis
+            sint.</p>
+        <p id="s_2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente nam voluptatem fuga, cum rerum
+            natus
+            temporibus
+            repudiandae autem aspernatur quibusdam error quia, fugiat sunt sequi reprehenderit illum consectetur
+            perspiciatis
+            sint.</p>
+
+    </section>
+
+    <section>
+
+        <p>lorem</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sunt voluptate labore repudiandae minima,
+            culpa praesentium incidunt perspiciatis dicta velit perferendis. Magnam culpa, fuga odit possimus impedit
+            itaque non quasi?</p>
+
+    </section>
+
+
+    <script>
+
+
+        var parrafosP = document.querySelectorAll('[id^=p]');
+
+        parrafosP.forEach((parrafo) => {
+
+            //parrafo.style.cssText = " background-color: black; color: white";
+            parrafo.className = 'negro';
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
