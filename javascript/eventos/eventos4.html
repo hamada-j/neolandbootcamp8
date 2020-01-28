@@ -19,12 +19,43 @@
         //con listeners no podeis crear ni tocar nada de html ni css todo por javascript.
 
         //si pulso en cuadrado elemento se transformara en un cuadrado
-            //1 - 100 x 100 en red
-            //pasando parametros de alto y color.
+        //1 - 100 x 100 en red
+        //pasando parametros de alto y color.
 
         //si pulso en circulo elemento se transformara en un circulo
-            //1 - 100 x 100 en red
-            //pasando parametros de alto y color.
+        //1 - 100 x 100 en red
+        //pasando parametros de alto y color.
+
+        var btnCuadrado = document.querySelector('#cuadrado');
+        var btnCirculo = document.getElementById('circulo');
+        var elemento = document.getElementById('elemento');
+
+        btnCuadrado.dataset.color = "blue";
+        btnCirculo.dataset.color = "tomato";
+
+        btnCirculo.dataset.alto = '200px';
+        btnCuadrado.dataset.alto = '100px';
+
+        btnCuadrado.addEventListener('click', cambiarElemento);
+
+        btnCirculo.addEventListener('click', cambiarElemento);
+
+        function cambiarElemento(e) {
+            let btn = e.target.id;
+
+            let alto = e.target.dataset.alto;
+            let color = e.target.dataset.color;
+
+            switch (btn) {
+                case 'cuadrado':
+                    elemento.style.cssText = `width: ${alto}; height: ${alto}; background-color: ${color}; transition: 1s`;
+                    break;
+
+                case 'circulo':
+                    elemento.style.cssText = `width: ${alto}; height: ${alto}; background-color: ${color}; transition: 1s; border-radius: 50%`;
+                    break;
+            }
+        }
 
 
 

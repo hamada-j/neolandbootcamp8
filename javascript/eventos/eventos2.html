@@ -13,13 +13,19 @@
             height: 100px;
             background-color: coral;
             transition: 0.5s;
+
         }
     </style>
 </head>
 
 <body>
 
-    <button onclick="irIzquierda()">IZQUIERDA</button><button onclick="irDerecha()">DERECHA</button>
+    <button onclick="irIzquierda()">IZQUIERDA</button>
+    <button onclick="irDerecha()">DERECHA</button>
+    <button onclick="moverVertical(this)">ARRIBA</button>
+    <button onclick="moverVertical(this)">ABAJO</button>
+
+
 
 
     <div class="cuadrado"></div>
@@ -36,15 +42,37 @@
 
         var cuadrado = document.querySelector('.cuadrado');
         var avance = 0;
+        var avanceY = 0;
 
         function irIzquierda() {
-            avance = avance - 100; //avance -= 10
-            cuadrado.style.transform = avance + 'px';
+            avance = avance - 10; //avance -= 10
+            cuadrado.style.marginLeft = avance + 'px';
         }
 
         function irDerecha() {
-            avance = avance + 100; //avance += 10
+            avance = avance + 10; //avance += 10
             cuadrado.style.marginLeft = avance + 'px';
+        }
+
+
+        function moverVertical(pObjetoHtml) {
+
+            let direccion = pObjetoHtml.innerText.toLowerCase();
+
+            switch (direccion) {
+                case 'arriba':
+                    //ire para arriba 
+                    avanceY -= 10
+                    break;
+
+                case 'abajo':
+                    //ire para abajo 
+                    avanceY += 10;
+                    break;
+            }
+
+            cuadrado.style.transform = 'translateY(' + avanceY + 'px)';
+
         }
 
 

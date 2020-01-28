@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discrimiar eventos</title>
+    <style>
+        .cuadrado,
+        .cuadrado2 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>1</span>
+    <button>mover1</button>
+    <button>girar1</button>
+
+    <hr>
+    <span>2</span>
+    <button>mover2</button>
+    <button>girar2</button>
+
+    <hr>
+
+    <div class="cuadrado">1</div>
+    <div class="cuadrado2">2</div>
+
+    <script>
+
+        var botones = document.getElementsByTagName('button');
+
+        for (let i = 0; i < botones.length; i++) {
+            botones[i].addEventListener('click', recogerInfo);
+        }
+
+        function recogerInfo(evento) {
+            var textoBtn = evento.target.innerText;
+
+            switch (textoBtn) {
+                case 'mover1':
+                    mover('.cuadrado');
+                    break;
+
+                case 'girar1':
+                    girar('.cuadrado', 40);
+                    break;
+
+                case 'girar2':
+                    girar('.cuadrado2');
+                    break;
+
+                case 'mover2':
+                    mover('.cuadrado2');
+                    break;
+            }
+
+        }
+
+        function mover(pNumero) {
+            var cuadrado = document.querySelector(pNumero);
+            cuadrado.style.transform = 'translateX(100px)';
+        }
+
+
+        function girar(pNumero, pGrados = "20") {
+            var cuadrado = document.querySelector(pNumero);
+            cuadrado.style.transform = `rotateZ(${pGrados}deg)`;
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

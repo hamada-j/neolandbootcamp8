@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tabs{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#menu li{
+    background-color: black;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#menu li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+
+}
+
+#menu li:hover {
+    background-color: brown;
+}
+
+
+.contenedor{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.contenedor section{
+    padding: 10px;
+    line-height: 20px;
+}
+
+#contact, #services{
+    display: none;
+}

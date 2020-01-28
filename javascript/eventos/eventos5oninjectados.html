@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discrimiar eventos</title>
+    <style>
+        .cuadrado,
+        .cuadrado2 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>1</span>
+    <button onclick="mover(this.innerText)">mover1</button>
+    <button onclick="girar(this.innerText)">girar1</button>
+
+    <hr>
+    <span>2</span>
+    <button onclick="mover(this.innerText)">mover2</button>
+    <button onclick="girar(this.innerText)">girar2</button>
+
+    <hr>
+
+    <div class="cuadrado">1</div>
+    <div class="cuadrado2">2</div>
+
+    <script>
+
+        function mover(pNumeroElemento) {
+            if (pNumeroElemento == 'mover1') {
+                //mover cuadrado1
+                var cuadrado = document.querySelector('.cuadrado');
+                cuadrado.style.marginLeft = "300px";
+
+            }
+            else {
+                //mover cuadrado2
+                var cuadrado2 = document.querySelector('.cuadrado2');
+                cuadrado2.style.marginLeft = "700px";
+            }
+        }
+
+
+        function girar(pNumeroElemento) {
+            console.log(pNumeroElemento);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

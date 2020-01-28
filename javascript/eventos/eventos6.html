@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>coche</title>
+    <style>
+        .coche {
+            width: 150px;
+            height: 80px;
+            background-image: url(images/camaro.png);
+            background-size: cover;
+            transform: rotateZ(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="coche"></div>
+
+    <script>
+
+        document.addEventListener('keydown', capturaTecla)
+        var coche = document.querySelector('.coche');
+        var coorX = 0;
+        var coorY = 0;
+
+
+        function capturaTecla(e) {
+
+            var tecla = e.keyCode;
+
+            switch (tecla) {
+                case 37:
+                    //izqquierda
+                    moverCocheHorizontal(-10, 0);
+                    break;
+
+                case 38:
+                    //arriba
+                    moverCocheVertical(-10, 90);
+                    break;
+
+                case 39:
+                    //derecha
+                    moverCocheHorizontal(10, 180);
+                    break;
+
+                case 40:
+                    //abajo
+                    moverCocheVertical(10, 270);
+                    break;
+
+            }
+
+        }
+
+        function moverCocheHorizontal(pDistancia, pGrados) {
+            coorX = coorX + pDistancia;
+            coche.style.marginLeft = coorX + 'px';
+            coche.style.transform = 'rotateZ(' + pGrados + 'deg)';
+        }
+
+        function moverCocheVertical(pDistantia, pGrados) {
+            coorY = coorY + pDistantia;
+            coche.style.marginTop = coorY + 'px';
+            coche.style.transform = 'rotateZ(' + pGrados + 'deg)';
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
