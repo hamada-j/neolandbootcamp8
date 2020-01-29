@@ -34,3 +34,22 @@ function filtrarXEdad(pListaPacientes, pEdadMinina, pEdadMaxima) {
     return listaFiltrada;
 
 }
+
+
+//funcion de filtro de busqueda
+
+function filtrarBusqueda(pListaPacientes, pPalabraBuscar) {
+
+    var listaFiltrada = new Array();
+
+    listaFiltrada = pListaPacientes.filter(paciente => {
+        var nombrePaciente = paciente.nombre.toLowerCase();
+        var apellidoPaciente = paciente.apellido.toLowerCase();
+
+        return nombrePaciente.includes(pPalabraBuscar) || apellidoPaciente.includes(pPalabraBuscar);
+    })
+
+
+    return listaFiltrada;
+
+}

@@ -150,9 +150,6 @@ a.article:hover {
     top: 0;
     right: 0;
 }
-.components li{
-    padding: 20px;
-}
 
 #content.active {
     width: 100%;
