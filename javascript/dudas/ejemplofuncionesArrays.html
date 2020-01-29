@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>funciones con arrays</title>
+</head>
+
+<body>
+
+    <script>
+
+        //lista simple
+
+        var listaAlumnos = new Array('Andrea', 'Ana', 'Maria', 'Irina');
+
+        listaAlumnos[3] //Irina
+
+        //array asociativo JSON
+
+        var animal = {
+            nombre: "Aguila Imperial",
+            especie: "Aves rapaces",
+            longevidad: 15,
+            peso: 10
+        }
+
+        animal.nombre //Aguila imperial
+
+        animal['especie'] //"Aves rapaces"
+
+
+        //array multidimensional array de arrays
+
+        var listaAlumnos = new Array(
+            ['Ana', 'Rodrigo', 'Elena'],
+            ['Pedro', 'Joaquin', 'Lucia'],
+            ['Ana', 'Maria', 'Victor']
+        )
+
+        var alumnoData = listaAlumnos[1][1] //joaquin
+
+        var ana;
+
+        ana += "hola";
+
+        //array multi de json
+
+        var listaProductos = new Array();
+
+        listaProductos = [
+            {
+                nombre: "leche",
+                precio: 1
+            },
+            {
+                nombre: "pan",
+                precio: 0.5
+            },
+            {
+                nombre: "jabon",
+                precio: 3
+            }
+        ]
+
+        listaProductos[2].precio //3
+        listaProductos[2].nombre //jabon
+
+
+
+        /* for i
+
+            for(var i=0; i<longitudArray ; i++){
+
+            }
+         */
+
+
+        /* for of
+             var listaPacientes = new Array();
+             for(paciente of listaPacientes){
+ 
+             }
+          */
+
+        /*
+
+            var listaProductos = new Array();
+
+            listaProducto.forEach( (producto) => {
+
+            })
+
+        */
+
+
+
+
+    </script>
+
+</body>
+
+</html>
