@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MiPrimerProyecto';
+
+  arrNums: number[];
+
+  numero: number;
+  cad: string;
+
+  constructor() {
+    this.arrNums = [5, 8, 3];
+    this.numero = 23;
+    this.cad = 'Hola';
+  }
+
 }
