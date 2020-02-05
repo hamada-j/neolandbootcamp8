@@ -1,0 +1,21 @@
+<app-semaforo></app-semaforo>
+
+<button (click)="manejarClick()">Cambia Color</button>
+<input type="text" [(ngModel)]="estilosParrafo.color">
+<select [(ngModel)]="estilosParrafo.backgroundColor">
+  <option value="red">Rojo</option>
+  <option value="green">Verde</option>
+  <option value="yellow">Amarillo</option>
+</select>
+<input type="range" (input)="modifyText($event)">
+
+<p [ngStyle]="estilosParrafo" *ngIf="mostrar">Lorem ipsum dolor, sit amet consectetur adipisicing
+  elit. Unde eveniet
+  tempora
+  laudantium
+  voluptate fuga, beatae illo. Aliquid omnis repudiandae quisquam, neque minima maxime laudantium? Cumque illum dolorum
+  explicabo iste aliquam.</p>
+
+<p *ngIf="!mostrar">Otro párrafo</p>
+
+<app-episodios></app-episodios>

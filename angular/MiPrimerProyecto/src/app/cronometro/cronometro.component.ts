@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cronometro',
@@ -12,8 +12,11 @@ export class CronometroComponent implements OnInit {
   @Input() inicio: number;
   @Input() fin: string;
 
+  @Output() terminaContador: EventEmitter<string>;
+
   constructor() {
     this.contador = 10;
+    this.terminaContador = new EventEmitter();
   }
 
   ngOnInit() {
@@ -24,8 +27,9 @@ export class CronometroComponent implements OnInit {
     console.log(this.contador, this.fin);
     const interval = setInterval(() => {
       this.contador--;
-      if (this.contador === parseInt(this.fin)) {
+      if (this.contador === 0) {
         clearInterval(interval);
+        this.terminaContador.emit('Termina el cronómetro');
       }
     }, 1000);
   }
