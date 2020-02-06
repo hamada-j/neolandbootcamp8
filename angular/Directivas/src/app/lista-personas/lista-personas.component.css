@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.persona-item {
+    width: 300px;
+    border: 1px solid black;
+    padding: 5px 25px;
+}
+
+.persona-item h3 {
+    background-color: silver;
+    padding: 10px;
+}

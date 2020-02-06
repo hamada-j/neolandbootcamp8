@@ -1,0 +1,15 @@
+<div class="header">
+  <h2>CAJA REGISTRADORA</h2>
+</div>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-8">
+      <app-lista-productos titulo="comida" [productos]="arrComida"
+        (productoSeleccionado)="manejarProductoSeleccionado($event)"></app-lista-productos>
+      <app-lista-productos></app-lista-productos>
+    </div>
+    <div class="col-4">
+      <app-pedido></app-pedido>
+    </div>
+  </div>
+</div>

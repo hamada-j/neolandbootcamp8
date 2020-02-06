@@ -1,0 +1,11 @@
+.wrapper {
+    border: 1px solid black;
+}
+
+.header {
+    background-color: burlywood;
+}
+
+img {
+    width: 100%;
+}

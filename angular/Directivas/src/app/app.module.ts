@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SemaforoComponent } from './semaforo/semaforo.component';
 import { EpisodiosComponent } from './episodios/episodios.component';
+import { ListaPersonasComponent } from './lista-personas/lista-personas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemaforoComponent,
-    EpisodiosComponent
+    EpisodiosComponent,
+    ListaPersonasComponent
   ],
   imports: [
     BrowserModule,

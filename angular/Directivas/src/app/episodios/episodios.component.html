@@ -4,7 +4,7 @@
         <th>Título</th>
         <th>Director</th>
     </tr>
-    <tr *ngFor="let episodio of episodios; let indice = index; let primero = first; let ultimo = last; let par = even; let impar= odd;"
+    <tr *ngFor="let episodio of episodios; let indice = index; let primero = first; let ultimo = last; let par = even;x let impar= odd;"
         [ngClass]="{ filaPar: par , filaImpar: !par }">
         <td>{{ indice }}</td>
         <td>{{ episodio.title }}</td>
