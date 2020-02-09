@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { SemaforoComponent } from './semaforo/semaforo.component';
 import { EpisodiosComponent } from './episodios/episodios.component';
 import { ListaPersonasComponent } from './lista-personas/lista-personas.component';
+import { SeleccionComponent } from './seleccion/seleccion.component';
+import { SubrayadoDirective } from './subrayado.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemaforoComponent,
     EpisodiosComponent,
-    ListaPersonasComponent
+    ListaPersonasComponent,
+    SeleccionComponent,
+    SubrayadoDirective
   ],
   imports: [
     BrowserModule,

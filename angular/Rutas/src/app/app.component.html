@@ -1,0 +1,19 @@
+<nav>
+    <ul>
+        <li>
+            <a [routerLink]="['/principal']">Principal</a>
+        </li>
+        <li>
+            <a [routerLink]="['/info']">Información</a>
+        </li>
+        <li>
+            <a [routerLink]="['/sobre']">Sobre Mi</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+<div>
+    <button (click)="manejarClick('principal')">Principal</button>
+    <button (click)="manejarClick('info')">Información</button>
+    <button (click)="manejarClick('sobre')">Sobre Mi</button>
+</div>
