@@ -1,13 +1,15 @@
 <nav>
     <ul>
         <li>
-            <a [routerLink]="['/principal']">Principal</a>
+            <!--
+            <a [routerLink]="['/principal']" [routerLinkActive]="'activo'">Principal</a>
+            -->
         </li>
         <li>
-            <a [routerLink]="['/info']">Información</a>
+            <a [routerLink]="['/info']" [routerLinkActive]="'activo'">Información</a>
         </li>
         <li>
-            <a [routerLink]="['/sobre']">Sobre Mi</a>
+            <a [routerLink]="['/sobre']" routerLinkActive="activo">Sobre Mi</a>
         </li>
     </ul>
 </nav>

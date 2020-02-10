@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-usuario',
-  templateUrl: './usuario.component.html',
-  styleUrls: ['./usuario.component.css']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
 })
-export class UsuarioComponent implements OnInit {
+export class ProductComponent implements OnInit {
 
-  idUsuario: string;
+  productoId: string;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      console.log(params);
-      this.idUsuario = params.usuarioId;
+      this.productoId = params.productoId;
     });
   }
 
