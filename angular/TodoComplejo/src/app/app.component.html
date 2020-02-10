@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row header-title">
+    <div class="col-12 text-center">
+      <h1>Lista de Tareas</h1>
+      <h3>"El Retorno"</h3>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-4">
+        <app-formulario (tareaEnviada)="manejarTareaEnviada($event)"></app-formulario>
+      </div>
+      <div class="col-8">
+        <app-lista [tareas]="arrTareas"></app-lista>
+      </div>
+    </div>
+  </div>
+</div>

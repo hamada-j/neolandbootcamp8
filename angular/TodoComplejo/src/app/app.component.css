@@ -1,0 +1,12 @@
+.header-title {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.header-title h3 {
+    font-family: Sriracha;
+}

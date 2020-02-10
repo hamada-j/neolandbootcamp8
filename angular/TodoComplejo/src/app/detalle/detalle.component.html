@@ -1,0 +1,7 @@
+<div class="card text-white mb-3" [ngClass]="{ 'bg-danger': !tarea.completa, 'bg-success': tarea.completa}"
+    (click)="cambiarCompleta()">
+    <div class="card-header">{{ tarea.titulo }}</div>
+    <div class="card-body">
+        <p class="card-text">{{ tarea.texto }}</p>
+    </div>
+</div>

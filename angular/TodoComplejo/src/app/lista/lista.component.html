@@ -1,0 +1,14 @@
+<select (change)="manejarFiltro($event)">
+    <option value="todas">Todas</option>
+    <option value="completa">Completa</option>
+    <option value="incompleta">Incompleta</option>
+</select>
+<div class="row">
+    <div class="col-12">
+        <div *ngFor="let tarea of tareas">
+            <app-detalle [tarea]="tarea"
+                *ngIf="tareasMostradas === 'todas' || tarea.completa == (tareasMostradas=='completa')">
+            </app-detalle>
+        </div>
+    </div>
+</div>
