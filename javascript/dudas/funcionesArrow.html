@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones arrow</title>
+</head>
+
+<body>
+
+    <script>
+
+        //funcion arrow es una funcion anonima escrita de otra forma.
+
+        const saludar = (pNombre, pApellido, pDni, pNacimiento) => {
+            if (pDni.length == 9) {
+                alert('Bienvenido ' + pNombre + ' ' + pApellido + ', con fecha de nacimiento ' + pNacimiento + ' y dni ' + pDni);
+            }
+        };
+
+
+        //opcion 1
+        saludar('Juan', 'Perez', '56780933L', '04/02/2008');
+
+        //opcion 2
+        var name = "Pepe";
+        var lastname = 'Lopez';
+        var documentoIdentidad = '56780321C';
+        var birthday = '09/12/1970';
+
+        saludar(name, lastname, documentoIdentidad, birthday);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

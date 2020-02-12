@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recorrer arrays simples</title>
+</head>
+
+<body>
+
+    <section id="listaAlumnos">
+
+    </section>
+
+    <section id="listaAnimales">
+
+
+    </section>
+
+    <section id="listaCompra">
+
+
+    </section>
+
+
+    <script>
+
+        var seccionAlumnos = document.querySelector('#listaAlumnos');
+        var seccionAnimales = document.querySelector('#listaAnimales');
+        var seccionCompra = document.querySelector('#listaCompra');
+
+        const listaAlumnos = new Array('Laura', 'Joaquin', 'Lucia', 'Roberto');
+        const listaAnimales = new Array('Aguila', 'Periquito', 'León', 'Morsa');
+        const listaCompra = new Array('Leche', 'Huevos', 'Pan', 'Cervezas');
+
+        //for i - utilizamos i como contador de posicion dentro del array. Recordamos i = 0 y va hasta n-1
+        seccionAlumnos.innerHTML = '<ul>';
+        for (let i = 0; i < listaAlumnos.length; i++) {
+            seccionAlumnos.innerHTML += `<li>${listaAlumnos[i]}</li>`;
+        }
+        seccionAlumnos.innerHTML += '</ul>';
+
+
+        //for of - utilizamos for of para recorrer una lista sin tener que preocuparnos de las posiciones es el propio array el que se encarga de recorrerlo entero.
+
+        for (animal of listaAnimales) {
+
+            var parrafo = document.createElement('p');
+            var textoParrafo = document.createTextNode(animal);
+
+            parrafo.appendChild(textoParrafo);
+
+            seccionAnimales.appendChild(parrafo);
+        }
+
+        //terminología de objetos. Array tiene metodo forEach que me permite recorrer un array. Este metodo se vale de una funcion anonima para implementar la condicion.
+
+        listaCompra.forEach(item => seccionCompra.innerHTML += '<p>' + item + '</p>');
+
+
+    </script>
+
+</body>
+
+</html>

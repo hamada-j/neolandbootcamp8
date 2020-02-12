@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //object literal o json
+
+        const persona = {
+            nombre: "Lucia",
+            edad: 34,
+            estado: 'soltera',
+            embarazo: false,
+            ciudades: ['Madrid', 'Barcelona', 'Lepe'],
+            familia: {
+                padre: 'Juan',
+                madre: 'Pepa',
+                hermano: 'Joaquin'
+            }
+        }
+
+        console.log('edad', persona.edad);
+        console.log('papa', persona.familia.padre);
+        console.log('Ultima ciudad donde vivio', persona.ciudades[persona.ciudades.length - 1])
+
+
+
+
+    </script>
+
+</body>
+
+</html>
