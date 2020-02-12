@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Formularios": {
+    "ListaEmpleados": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Formularios",
+            "outputPath": "dist/ListaEmpleados",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Formularios:build"
+            "browserTarget": "ListaEmpleados:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Formularios:build:production"
+              "browserTarget": "ListaEmpleados:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Formularios:build"
+            "browserTarget": "ListaEmpleados:build"
           }
         },
         "test": {
@@ -111,18 +111,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Formularios:serve"
+            "devServerTarget": "ListaEmpleados:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Formularios:serve:production"
+              "devServerTarget": "ListaEmpleados:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Formularios",
+  "defaultProject": "ListaEmpleados",
   "cli": {
     "analytics": false
   }

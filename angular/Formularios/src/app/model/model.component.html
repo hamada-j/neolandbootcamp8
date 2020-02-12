@@ -1,1 +1,59 @@
-<p>model works!</p>
+<div>
+    <p>Formulario Valido: {{ formulario.valid }}</p>
+    <p>Formulario Touched: {{ formulario.touched }}</p>
+    <p>Formulario Dirty: {{ formulario.dirty }}</p>
+</div>
+<div>
+    <p>Campo Nombre Valido: {{ formulario.controls.nombre.valid }}</p>
+    <p>Campo Nombre Touched: {{ formulario.controls['nombre'].touched }}</p>
+</div>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre">
+        {{formulario.controls.nombre.errors | json}}
+        <p class="error"
+            *ngIf="formulario.controls.nombre.errors?.required && formulario.controls.nombre.touched && formularioEnviado">
+            El campo nombre es requerido
+        </p>
+        <p class="error" *ngIf="formulario.controls.nombre.errors?.maxlength && formulario.controls.nombre.dirty">
+            El campo nombre debe tener una longitud máxima de
+            {{ formulario.controls.nombre.errors.maxlength.requiredLength }} y tu estás introduciendo
+            {{ formulario.controls.nombre.errors.maxlength.actualLength }} caracteres
+        </p>
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control" formControlName="edad">
+        <p class="error" *ngIf="formulario.controls.edad.errors?.edadvalidator && formulario.controls.edad.touched">
+            La edad debe estar entre {{formulario.controls.edad.errors.edadvalidator.min}} y
+            {{formulario.controls.edad.errors.edadvalidator.max}}
+        </p>
+    </div>
+    <div class="form-group">
+        <label>Dni</label>
+        <input type="text" class="form-control" formControlName="dni">
+        <p class="error" *ngIf="formulario.controls.dni.errors?.dnivalidator && formulario.controls.dni.touched">
+            {{ formulario.controls.dni.errors.dnivalidator.msg }}
+        </p>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <div class="form-group">
+        <label>Repite Password</label>
+        <input type="password" class="form-control" formControlName="repite_password">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-block btn-success" />
+    <p class="error" *ngIf="formularioEnviado && !formulario.valid">Rellena bien los campos INUTIL</p>
+</form>
