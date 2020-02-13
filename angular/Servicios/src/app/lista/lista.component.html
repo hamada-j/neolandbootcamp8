@@ -1,0 +1,7 @@
+<input type="text" (input)="manejarCampoTexto($event)" />
+<ul>
+    <li *ngFor="let persona of listaPersonas">
+        {{ persona.nombre }} {{ persona.apellidos }}
+    </li>
+</ul>
+<button (click)="manejarClick()">Mayores de 30</button>

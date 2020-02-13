@@ -1,0 +1,24 @@
+<div class="row mb-3">
+    <div class="col-12">
+        <select class="form-control" (change)="manejarChange($event)">
+            <option value="todos">Todos 🌍</option>
+            <option value="españa">España 🇪🇸</option>
+            <option value="reino unido">Reino Unido 🇬🇧</option>
+            <option value="chile">Chile 🇨🇱</option>
+            <option value="canadá">Canadá 🇨🇦</option>
+        </select>
+    </div>
+</div>
+<div class="row mb-5">
+    <div class="col-3 border" *ngFor="let escritor of arrEscritores"
+        [routerLink]="['/escritores', escritor.id, 'libros']">
+        <h6>{{escritor.nombre}} {{escritor.apellidos}}</h6>
+        <div [ngSwitch]="escritor.pais">
+            <span *ngSwitchCase="'españa'">🇪🇸</span>
+            <span *ngSwitchCase="'reino unido'">🇬🇧</span>
+            <span *ngSwitchCase="'chile'">🇨🇱</span>
+            <span *ngSwitchCase="'canadá'">🇨🇦</span>
+        </div>
+        <img [src]="escritor.imagen" width="100%">
+    </div>
+</div>
