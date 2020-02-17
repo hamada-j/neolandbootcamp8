@@ -1,0 +1,18 @@
+<select (change)="manejarChange($event)">
+    <option value="macbook">Macbook</option>
+    <option value="imac">iMac</option>
+    <option value="macmini">Mac Mini</option>
+    <option value="iphone">iPhone</option>
+    <option value="ipad">iPad</option>
+    <option value="watch">Watch</option>
+    <option value="accesorios">Accesorios</option>
+</select>
+<div class="row">
+    <div class="col-3" *ngFor="let producto of arrProductos">
+        <h5>{{ producto.name }}</h5>
+        <img [src]="producto.image" width="100%" alt="">
+        <p>{{ producto.price }}</p>
+        <p>{{ producto.categoria }}</p>
+        <button (click)="comprarProducto(producto)" class="btn btn-info btn-block">Comprar</button>
+    </div>
+</div>

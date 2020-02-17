@@ -21,6 +21,11 @@ export class AppComponent implements OnInit {
     // localStorage.setItem('arrNums', JSON.stringify(arr));
 
     console.log(JSON.parse(localStorage.getItem('arrNums')));
+
+    this.planetasService.getNames()
+      .then(
+        arr => console.log(arr)
+      );
   }
 
 }

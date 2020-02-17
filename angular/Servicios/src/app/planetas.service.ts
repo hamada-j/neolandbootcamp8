@@ -16,6 +16,28 @@ export class PlanetasService {
     return this.httpClient.get<any>(`${this.baseUrl}&page=${pPage}`).toPromise();
   }
 
+  getNames() {
+    return new Promise((resolve, reject) => {
+      this.getAll()
+        .then(response => {
+          let arrNuevo = response.results.map(planet => planet.name)
+          return arrNuevo;
+        })
+        .then(arrNombres => {
+          resolve(arrNombres);
+        });
+    })
+  }
+
+  pintarArray(arrNombres) {
+    console.log(arrNombres);
+  }
+
+  extractNames(response) {
+    let arrNuevo = response.results.map(planet => planet.name)
+    return arrNuevo;
+  }
+
   getRandomNum(): Promise<any> {
     const body = {
       max: 34,
@@ -25,3 +47,12 @@ export class PlanetasService {
   }
 
 }
+
+
+
+
+
+
+
+
+
