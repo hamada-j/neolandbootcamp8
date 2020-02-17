@@ -1,0 +1,12 @@
+<div class="botones">
+    <button (click)="cambiarPagina(false)" [disabled]="paginaActual === 1">Anterior</button>
+    <button (click)="cambiarPagina(true)" [disabled]="paginaActual === numPaginas">Siguiente</button>
+</div>
+<h3>Página {{ paginaActual }}</h3>
+<div class="wrapper">
+    <div class="planeta" *ngFor="let planeta of arrPlanetas">
+        <h5>{{ planeta.name }}</h5>
+        <p>Clima: {{ planeta.climate }}</p>
+        <p>Población: {{ planeta.population }} </p>
+    </div>
+</div>
