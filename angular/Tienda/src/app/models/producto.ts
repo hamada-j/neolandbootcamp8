@@ -5,4 +5,5 @@ export class Producto {
     price: string;
     image: string;
     categoria: string;
+    count: number;
 }

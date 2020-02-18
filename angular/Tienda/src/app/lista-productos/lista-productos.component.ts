@@ -1,3 +1,4 @@
+import { ID_CARRITO } from './../utils';
 import { ProductosService } from './../productos.service';
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../models/producto';
@@ -22,11 +23,11 @@ export class ListaProductosComponent implements OnInit {
   }
 
   async comprarProducto(pProducto) {
-    if (!localStorage.getItem('idCarrito')) {
+    if (!localStorage.getItem(ID_CARRITO)) {
       // 2- Creo Carrito
       const response = await this.productosService.createCart();
       // 2.1 - Inserto el id en LS
-      localStorage.setItem('idCarrito', response['token_cart']);
+      localStorage.setItem(ID_CARRITO, response['token_cart']);
     }
     // 3- Agregamos el producto
     const responseAdd = await this.productosService.addProduct(pProducto);

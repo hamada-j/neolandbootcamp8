@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-3" *ngFor="let producto of arrProductos">
+        <h5>{{ producto.name }}</h5>
+        <img [src]="producto.image" width="100%" alt="">
+        <p>{{ producto.price }}</p>
+        <p>{{ producto.categoria }}</p>
+        <p>{{ producto.count }}</p>
+        <button class="btn btn-block btn-danger" (click)="borrarProducto(producto)">BORRAR</button>
+    </div>
+</div>
