@@ -1,0 +1,25 @@
+<app-semaforo></app-semaforo>
+
+<p>{{ 'en un lugar de la mancha' | capitalize }}</p>
+<br>
+<br>
+
+<p>{{ precio | currency:'EUR' }}</p>
+<p>{{ fechaActual | date:'dd-MM-yyyy HH:mm.ss' }}</p>
+<p>{{ numero | number:'1.2-4' }}</p>
+<p>{{ numAleatorio | percent:'1.2-2' }}</p>
+<input type="range" name="" id="" min="0" [max]="arrNumeros.length" step="1" (input)="manejarChangeInicio($event)"
+  [value]="inicio">
+<br>
+<input type="range" name="" id="" min="0" [max]="arrNumeros.length" step="1" (input)="manejarChangeFin($event)"
+  [value]="fin">
+<ul>
+  <li *ngFor="let num of arrNumeros | slice:inicio:fin">
+    {{ num }}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let user of promesaUsers|async">
+    {{ user.name }}
+  </li>
+</ul>
