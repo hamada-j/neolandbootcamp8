@@ -1,0 +1,15 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Título</label>
+        <input type="text" class="form-control" formControlName="titulo">
+    </div>
+    <div class="form-group">
+        <label>Descripción</label>
+        <input type="text" class="form-control" formControlName="descripcion">
+    </div>
+    <div class="form-group">
+        <label>Url</label>
+        <input type="text" class="form-control" formControlName="url">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-block btn-info">
+</form>

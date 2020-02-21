@@ -1,0 +1,5 @@
+<div class="persona" *ngFor="let persona of arrPersonas; trackBy: trackPersona">
+    <h5>{{persona.nombre}} {{ persona.apellidos}}</h5>
+    <p>Edad: {{persona.edad}}</p>
+</div>
+<button (click)="manejarClick()">Agregar Persona</button>

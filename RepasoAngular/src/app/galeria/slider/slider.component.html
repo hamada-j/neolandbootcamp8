@@ -1,0 +1,8 @@
+<div *ngIf="listaImagenes.length > 0">
+    <img [src]="listaImagenes[imagenActual].url" width="300">
+    <div class="botones">
+        <button (click)="cambiarSiguiente(false)" [disabled]="imagenActual === 0">Anterior</button>
+        <button (click)="cambiarSiguiente(true)"
+            [disabled]="imagenActual === listaImagenes.length - 1">Siguiente</button>
+    </div>
+</div>
