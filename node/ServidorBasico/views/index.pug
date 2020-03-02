@@ -1,0 +1,41 @@
+extends layout.pug
+
+block contenido
+  // Comentario HTML
+  //- Comentario PUG
+  - const palabras = ["perro", "casa", "coche", "azul"]
+  h1#cabecera.principal.rojo.text-center Este es mi título
+  #uno.primero
+    p Contenido del párrafo
+    p Otro párrafo
+    a(href="http://www.google.es") Google.es
+    ul
+      li Uno
+      li Dos
+      li= palabras[2]
+  .segundo(style=estilos)
+    h2= title
+    p Mi título es: #{title}
+    p= nombre
+    img(src=urlImagen, width="200", alt="Imagen de developer feliz")
+  .tercero
+    case randomNum
+      when 0
+        p Ha salido el número 0
+      when 1
+        p Ha salido el número 1
+      when 2
+        p Ha salido el número 2
+      default
+        p Número no reconocido
+  .cuarto
+    ol
+      each valor, indice in numeros
+        li #{valor} #{indice}
+      else
+        li No tengo números
+
+  
+
+block piepagina
+  p Footer para el index
