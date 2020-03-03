@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    h2 Creación Nuevo Alumno
+    form(action="/students/create", method="POST")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre")
+        .form-group
+            label Apellidos
+            input.form-control(type="text", name="apellidos")
+        .form-group
+            label Edad
+            input.form-control(type="text", name="edad")
+        .form-group
+            label Email
+            input.form-control(type="text", name="email")
+        .form-group
+            label Número de Matrícula
+            input.form-control(type="text", name="numMatricula")
+        input.btn.btn-block.btn-info(type="submit", value="Enviar")
