@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    if alumno
+        h2 #{alumno.nombre} #{alumno.apellidos}
+        p= alumno.email
+        p= alumno.edad
+        p= alumno.notamedia
+    else
+        p No existe alumno para este ID!!

@@ -10,11 +10,15 @@ block content
                 th Edad
                 th Email
                 th Núm Matrícula
+                th Acciones
         tbody
-            each estudiante in estudiantes
+            each estudiante in estudiantes                
                 tr
                     td= estudiante.nombre
                     td= estudiante.apellidos
                     td= estudiante.edad
                     td= estudiante.email
-                    td= estudiante.numMatricula                    
+                    td= estudiante.matricula    
+                    td
+                        a.btn.btn-sm.btn-primary(href="/students/"+estudiante.id) View
+                        a.btn.btn-sm.btn-danger(href="/students/delete/"+estudiante.id) Borrar

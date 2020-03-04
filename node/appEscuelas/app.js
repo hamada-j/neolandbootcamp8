@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const studentsRouter = require('./routes/students');
 
+require('dotenv').config();
+
 var app = express();
 
 require('./db').connect();
