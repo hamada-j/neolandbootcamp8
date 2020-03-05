@@ -1,0 +1,8 @@
+<div class="container">
+    <div *ngFor="let student of listaAlumnos">
+        <h2>{{ student.nombre }} {{ student.apellidos }}</h2>
+        <p>Email: {{ student.email }}</p>
+        <button class="btn btn-block btn-info" [routerLink]="['/alumnos', student.id]">Ver Detalle</button>
+        <button class="btn btn-danger btn-block" (click)="manejarClick(student)">Borrar</button>
+    </div>
+</div>
