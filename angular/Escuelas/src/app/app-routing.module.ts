@@ -1,3 +1,4 @@
+import { RegistroComponent } from './registro/registro.component';
 import { DetalleAlumnoComponent } from './detalle-alumno/detalle-alumno.component';
 import { FormAlumnosComponent } from './form-alumnos/form-alumnos.component';
 import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
@@ -7,7 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'alumnos', component: ListaAlumnosComponent },
   { path: 'alumnos/:alumnoId', component: DetalleAlumnoComponent },
-  { path: 'new', component: FormAlumnosComponent }
+  { path: 'new', component: FormAlumnosComponent },
+  { path: 'register', component: RegistroComponent }
 ];
 
 @NgModule({

@@ -1,7 +1,12 @@
 const router = require('express').Router();
 
 const Student = require('../../models/student');
+const middlewares = require('../middlewares');
 
+router.use(middlewares.checkToken);
+router.use(middlewares.registerAction);
+
+// GET http://localhost:3000/api/students
 router.get('/', async (req, res) => {
     const rows = await Student.getAll();
     res.json(rows);

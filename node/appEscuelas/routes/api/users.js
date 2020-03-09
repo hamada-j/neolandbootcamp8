@@ -31,7 +31,6 @@ router.post('/login', async (req, res) => {
         if (!user) {
             return res.json({ error: 'Error en email y/o password' });
         }
-        console.log(req.body.password, user.password);
         const iguales = bcrypt.compareSync(req.body.password, user.password);
         if (iguales) {
             res.json({ success: createToken(user) });
