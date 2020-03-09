@@ -1,5 +1,6 @@
 import { AlumnosService } from './../alumnos.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-alumnos',
@@ -10,15 +11,21 @@ export class ListaAlumnosComponent implements OnInit {
 
   listaAlumnos: any[];
 
-  constructor(private alumnosService: AlumnosService) { }
+  constructor(
+    private alumnosService: AlumnosService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.alumnosService.getAll()
       .then(response => {
+        console.log(response);
         this.listaAlumnos = response;
       })
       .catch(err => {
         console.log(err);
+        this.router.navigate(['/login']);
+        this.listaAlumnos = [];
       });
   }
 

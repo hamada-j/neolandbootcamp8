@@ -29,13 +29,13 @@ router.post('/login', async (req, res) => {
     try {
         const user = await User.emailExists(req.body.email);
         if (!user) {
-            return res.json({ error: 'Error en email y/o password' });
+            return res.status(401).json({ error: 'Error en email y/o password' });
         }
         const iguales = bcrypt.compareSync(req.body.password, user.password);
         if (iguales) {
             res.json({ success: createToken(user) });
         } else {
-            res.json({ error: 'Error en email y/o password' });
+            res.status(401).json({ error: 'Error en email y/o password' });
         }
     } catch (err) {
         console.log(err);

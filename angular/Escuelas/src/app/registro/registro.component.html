@@ -13,3 +13,8 @@
     </div>
     <input type="submit" value="Enviar" class="btn btn-block btn-primary">
 </form>
+<ul>
+    <li *ngFor="let error of errores">
+        {{error.msg}}
+    </li>
+</ul>

@@ -13,7 +13,12 @@ export class AlumnosService {
   }
 
   getAll(): Promise<any> {
-    return this.httpClient.get(this.baseUrl).toPromise();
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'user-token': localStorage.getItem('token')
+      })
+    }
+    return this.httpClient.get(this.baseUrl, httpOptions).toPromise();
   }
 
   getById(pAlumnoId): Promise<any> {
