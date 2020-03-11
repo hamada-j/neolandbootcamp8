@@ -9,6 +9,13 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/nombres', async (req, res) => {
+    Empleado.find((err, empleados) => {
+        let arrNombres = empleados.map(empleado => empleado.nombre_completo);
+        res.json(arrNombres);
+    });
+});
+
 router.post('/', (req, res) => {
     Empleado.create(req.body)
         .then(empleado => {

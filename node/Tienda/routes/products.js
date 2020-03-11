@@ -20,6 +20,13 @@ router.get('/:productoId', (req, res) => {
     });
 });
 
+router.get('/edit/:productoId', (req, res) => {
+    Producto.findById(req.params.productoId, (err, producto) => {
+        if (err) return res.json(err);
+        res.render('products/formularioEdit', { prod: producto });
+    });
+});
+
 router.post('/create', (req, res) => {
     if (!req.body.activo) {
         req.body.activo = false;
@@ -30,6 +37,13 @@ router.post('/create', (req, res) => {
         .then(producto => {
             res.redirect('/products');
         });
+});
+
+router.post('/update', (req, res) => {
+    Producto.findByIdAndUpdate(req.body.productoId, req.body, (err, producto) => {
+        if (err) return res.json(err);
+        res.redirect(`/products/${producto._id}`)
+    })
 });
 
 // /**
