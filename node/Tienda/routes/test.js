@@ -45,4 +45,14 @@ router.get('/find', (req, res) => {
     });
 });
 
+router.get('/findfiltrado', (req, res) => {
+    Producto.find({
+        precio: { $gt: 200, $lt: 1000 },
+        departamento: { $in: ['electrodomesticos', 'informatica'] }
+    }, (err, productos) => {
+        if (err) return res.json(err);
+        res.json(productos);
+    });
+});
+
 module.exports = router;

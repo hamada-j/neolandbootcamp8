@@ -6,6 +6,7 @@
         <th>Departamento</th>
         <th>Precio</th>
         <th>Activo</th>
+        <th>Acciones</th>
     </tr>
     {{#each arrProductos as |prod|}}
     <tr>
@@ -13,6 +14,9 @@
         <td>{{prod.departamento}}</td>
         <td>{{prod.precio}}</td>
         <td>{{prod.activo}}</td>
+        <td>
+            <a href="/products/{{prod._id}}" class="btn btn-sm btn-info">Ver</a>
+        </td>
     </tr>
     {{/each}}
 </table>
