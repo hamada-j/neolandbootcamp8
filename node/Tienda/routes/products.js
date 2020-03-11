@@ -27,6 +27,19 @@ router.get('/edit/:productoId', (req, res) => {
     });
 });
 
+router.get('/delete/:productoId', (req, res) => {
+    Producto.findByIdAndRemove(req.params.productoId, (err, producto) => {
+        if (err) return res.json(err);
+        res.redirect('/products');
+    });
+});
+
+/**
+ * 
+ * PETICIONES POST
+ * 
+ */
+
 router.post('/create', (req, res) => {
     if (!req.body.activo) {
         req.body.activo = false;

@@ -20,7 +20,21 @@ empleadoSchema.virtual('nombre_completo').set(function (newValue) {
     this.apellidos = split[1];
 });
 
+empleadoSchema.methods.mismoDepartamento = function (callback) {
+    this.model('empleado').find({ departamento: this.departamento }, callback);
+}
+
 module.exports = mongoose.model('empleado', empleadoSchema);
 
 // let emp = new Empleado();
 // emp.nombre_completo = "Ana García";
+// emp.departamento = "informatica";
+// emp.mismoDepartamento((err, empleados) => {
+//     console.log(empleados);
+// });
+
+// let obj = {};
+// obj.nombre = 'Mario';
+// obj.mostrar = () => {
+
+// };

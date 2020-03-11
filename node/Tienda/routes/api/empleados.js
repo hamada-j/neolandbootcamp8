@@ -16,6 +16,15 @@ router.get('/nombres', async (req, res) => {
     });
 });
 
+router.get('/mismodepartamento', (req, res) => {
+    let emp = new Empleado();
+    emp.departamento = 'marketing';
+    emp.mismoDepartamento((err, empleados) => {
+        if (err) return res.json(err);
+        res.json(empleados);
+    });
+});
+
 router.post('/', (req, res) => {
     Empleado.create(req.body)
         .then(empleado => {

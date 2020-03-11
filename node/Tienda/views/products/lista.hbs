@@ -16,7 +16,9 @@
         <td>{{prod.activo}}</td>
         <td>
             <a href="/products/{{prod._id}}" class="btn btn-sm btn-info">Ver</a>
-            <a href="/products/edit/{{prod._id}}">Editar</a>
+            <a href="/products/edit/{{prod._id}}" class="btn btn-sm btn-primary">Editar</a>
+            <a href="/products/delete/{{prod._id}}" class="btn btn-sm btn-danger"
+                onclick="return confirm('¿Estás seguro de borrar el producto?');">Borrar</a>
         </td>
     </tr>
     {{/each}}
