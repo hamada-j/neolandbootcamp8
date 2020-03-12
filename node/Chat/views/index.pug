@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Chat
+  ul#listaMensajes.mensajes
+    li Fulanito: Hola Menganito
+    li Menganito: Hola qué tal!
+  div
+    input#username(type="text", name="username")
+    input#mensaje(type="text", name="mensaje")
+    button#btnEnviar Enviar
+  script.
+    let socket = io();

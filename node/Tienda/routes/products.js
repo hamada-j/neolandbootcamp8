@@ -12,6 +12,13 @@ router.get('/new', (req, res) => {
     res.render('products/formulario');
 });
 
+router.get('/activos', (req, res) => {
+    Producto.activos((err, productos) => {
+        if (err) return res.json(err);
+        res.render('products/lista', { arrProductos: productos });
+    });
+});
+
 router.get('/:productoId', (req, res) => {
     console.log(req.params.productoId);
     Producto.findById(req.params.productoId, (err, producto) => {

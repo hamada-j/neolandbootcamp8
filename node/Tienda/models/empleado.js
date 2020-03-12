@@ -7,7 +7,8 @@ let empleadoSchema = new Schema({
     identificador: String,
     departamento: String,
     edad: Number,
-    activo: Boolean
+    activo: Boolean,
+    productos: [{ type: Schema.Types.ObjectId, ref: 'Producto' }]
 });
 
 empleadoSchema.virtual('nombre_completo').get(function () {
