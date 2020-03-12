@@ -1,13 +1,46 @@
 extends layout
 
 block content
-  h1 Chat
-  ul#listaMensajes.mensajes
-    li Fulanito: Hola Menganito
-    li Menganito: Hola qué tal!
-  div
-    input#username(type="text", name="username")
-    input#mensaje(type="text", name="mensaje")
+  header
+    h1 Chat
+    p#usuariosConectados
+  main
+    ul#listaMensajes.mensajes
+      li Fulanito: Hola Menganito
+      li Menganito: Hola qué tal!
+  footer
+    .form-group
+      label User
+      input#username(type="text", name="username")
+    .form-group
+      label Mensaje
+      input#mensaje(type="text", name="mensaje")
     button#btnEnviar Enviar
   script.
+    console.log('Hola')
     let socket = io();
+
+    let inputUsername = document.getElementById('username');
+    let inputMensaje = document.getElementById('mensaje');
+    let listaMensajes = document.getElementById('listaMensajes');
+    let usuariosConectados = document.getElementById('usuariosConectados');
+
+    let boton = document.getElementById('btnEnviar');
+    boton.addEventListener('click', ()=>{
+      socket.emit('chat_message', {
+        username: inputUsername.value,
+        message: inputMensaje.value 
+      })
+    });
+
+    socket.on('chat_message', (data)=>{
+      console.log(data);
+      let li = document.createElement('li');
+      li.innerText = `${data.username}: ${data.message}`;
+      listaMensajes.appendChild(li);
+    });
+
+    socket.on('chat_users', (data) =>{
+      console.log(data);
+      usuariosConectados.innerText = `Usuarios: ${data}`;
+    });

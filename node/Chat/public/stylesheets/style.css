@@ -1,10 +1,35 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+header {
+  height: 10vh;
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white
 }
 
-.mensajes {}
+main {
+  height: 80vh;
+  padding: 30px 40px;
+}
+
+main ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+footer {
+  height: 10vh;
+  background-color: tomato;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
