@@ -1,0 +1,30 @@
+$colorPrincipal: #ee4433;
+$colorFondo: blue;
+
+body{
+    background-color: $colorFondo;
+}
+
+
+.primera{
+    h2{
+     color: yellow;
+     font: {
+         family: Arial, sans-serif;
+         size: 24px + 2;
+         weight: bold;
+     }
+    }
+    article{
+        background-color: white;
+        a{
+           color: $colorPrincipal; 
+           &:hover{
+               color: black;
+               text: {
+                   decoration: none;
+               }
+           }
+        }
+    }
+}
