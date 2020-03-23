@@ -19,27 +19,31 @@ export class ListaPlanetasPage implements OnInit {
 
   async ngOnInit() {
     const loading = await this.loadingController.create({
-      message: 'Cargando los planetas...',
-      duration: 2000
+      message: 'Se están recuperando los planetas'
     });
-
     await loading.present();
 
     this.planetasService.getAll()
-      .then(async response => {
-        // await loading.dismiss();
+      .then(response => {
+        // loading.dismiss();
+        setTimeout(() => loading.dismiss(), 1000);
         this.arrPlanetas = response['results'];
       });
   }
 
   async handleClick(planeta) {
-    const alerta = await this.alertController.create({
-      header: 'Información de Planeta',
+    const alert = await this.alertController.create({
+      header: 'Información del planeta',
       subHeader: planeta.name,
-      message: `Población: ${planeta.population}. Clima: ${planeta.climate}`,
-      buttons: ['cerrar']
+      message: `Clima: ${planeta.climate}.<br> Población: ${planeta.population}`,
+      buttons: [{
+        text: 'Botón 1',
+        handler: () => {
+          console.log('Se ha pulsado el botón 1');
+        }
+      }]
     });
-    await alerta.present();
+    await alert.present();
   }
 
 }
