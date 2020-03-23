@@ -1,0 +1,18 @@
+body {
+  background-color: tomato;
+  font-size: 1em; }
+
+.primera {
+  color: #444; }
+  .primera h2 {
+    text-decoration: underline;
+    font-family: Arial, sans-serif;
+    font-size: 4em;
+    font-weight: bold; }
+  .primera a {
+    display: inline-block;
+    padding: 10px;
+    background-color: red; }
+    .primera a:hover {
+      background-color: yellow;
+      transition: 1s; }

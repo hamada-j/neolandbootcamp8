@@ -1,0 +1,50 @@
+body{
+    @if $estilo == dark
+    {
+        background-color: $fondoOscuro;    
+    }@else
+    {
+        background-color: $fondoClaro;
+    }
+    
+}
+
+@for $i from 1 through 6{
+    h#{$i}{
+        font: {
+            size: $tamanoFuente * ($multiplicador/$i);
+        }
+    }
+}
+
+@mixin bordecitoJuanan($color, $ancho, $estilo, $padding: 10px){
+    border: {
+        color: $color;
+        width: $ancho;
+        style: $estilo;
+    } 
+    padding: $padding;
+}
+
+section{
+    @if $estilo == dark
+    {
+        @include bordecitoJuanan(black, 2px, solid, 30px);    
+    }
+    @else{
+        @include bordecitoJuanan(white, 2px, solid, 30px);
+    }
+}
+
+img{
+    @include bordecitoJuanan(green, 10px, dotted);
+}
+
+.juan_#{$modo}{
+    @if $estilo == dark{
+        color: black;
+    }
+    @else{
+        color : red;
+    }
+}

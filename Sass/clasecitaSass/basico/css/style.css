@@ -1,0 +1,16 @@
+body {
+  background-color: blue; }
+
+.primera h2 {
+  color: yellow;
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold; }
+
+.primera article {
+  background-color: white; }
+  .primera article a {
+    color: #ee4433; }
+    .primera article a:hover {
+      color: black;
+      text-decoration: none; }
