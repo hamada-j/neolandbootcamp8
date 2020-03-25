@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": "2b85b823-04ff-4bd9-a26d-7eca2d1446f7",
+      "nombre": "cereales",
+      "precio": 3
+    },
+    {
+      "id": "8bd19e1e-94a7-4fed-b636-22a665122341",
+      "nombre": "cervezas",
+      "precio": 12
+    }
+  ]
+}

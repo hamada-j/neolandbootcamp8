@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": "e51e2029-9213-4f9a-8943-aad2f08bf15b",
+      "nombre": "patata fritas",
+      "precio": 2
+    },
+    {
+      "id": "228cf7db-3b0a-4f96-be6b-20ea6fa1999d",
+      "nombre": "cervezas",
+      "precio": 12
+    },
+    {
+      "id": "5f84d713-9735-43b6-a91f-9c4353d2c43f",
+      "nombre": "manzanas",
+      "precio": 3
+    }
+  ]
+}
